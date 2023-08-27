@@ -53,7 +53,7 @@ h5 {
   justify-content: center;
 }
 .table-today {
-  width: 50% !important;
+  min-width: 50% !important;
   border-collapse: collapse;
   /* border: 2px solid #ccc; */
   margin: 10px 0;
