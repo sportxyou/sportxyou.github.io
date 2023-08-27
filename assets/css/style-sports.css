@@ -16,9 +16,13 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Righteous", cursive;
-  /* color: #d1d0d0 !important; */
-  margin: 0;
+  font-family: "Righteous", cursive !important;
+  font-weight: 500 !important;
+    /* color: #d1d0d0 !important; */
+    margin: 0 !important;
+}
+svg {
+    fill: transparent !important;
 }
 .wadah-description {
   /* background-color: #2c2c2c;
@@ -317,7 +321,10 @@ option {
   border: 1px dotted #0dcaf0db;
   border-collapse: inherit;
 }
-
+.table>:not(caption)>*>* {
+    color: inherit !important;
+  background-color: inherit !important;
+}
 .table:hover {
   transform: scale(1.1);
   transition: transform 0.5s ease-in-out;
@@ -447,11 +454,13 @@ option.select-ops {
   height: 1rem;
 }
 .header-desc {
-  background-color: #ededed;
+  border: 1px solid #8080807a;
+/*   background-color: #ededed; */
 }
 .header-desc2 {
   padding: 10px 10px 34px;
-  background-color: #ededed;
+  border: 1px solid #8080807a;
+/*   background-color: #ededed; */
   margin-bottom: 8px;
 }
 /* offcanavas */
