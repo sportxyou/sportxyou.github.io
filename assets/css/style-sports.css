@@ -547,3 +547,8 @@ div.popup-box__text::before {
   color: inherit;
   text-decoration: unset;
 }
+
+/* Dalam file CSS Anda */
+[ng-cloak] {
+  display: none !important;
+}
