@@ -160,18 +160,11 @@ svg {
   grid-template-columns: 1fr;
   gap: 1px;
 }
-tdImgTeamJersey{
-padding-bottom: 16px !important;
-}
-
-thImgTeamJersey{
+.thJersey{
 padding: 16px 2px !important;
 }
-thJersey{
-padding: 16px 0;
-}
-tdJersey{
-padding: 16px 0;
+.tdJersey{
+padding: 16px 0px !important;
 }
 .jersey-home {
   text-align: center;
