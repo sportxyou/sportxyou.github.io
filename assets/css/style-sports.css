@@ -306,6 +306,7 @@ padding: 16px 0px !important;
 .card-body {
   padding: 5px !important;
   width: 100%;
+  border: 1px solid #44656a47;
 }
 option {
   font-size: 14px;
