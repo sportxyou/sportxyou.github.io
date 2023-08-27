@@ -482,7 +482,7 @@ option.select-ops {
 }
 @media (min-width: 768px) {
   .offcanvas {
-    --bs-offcanvas-width: 58%;
+    --bs-offcanvas-width: 58% !important;
   }
 }
 
