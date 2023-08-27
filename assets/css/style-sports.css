@@ -29,8 +29,8 @@ svg {
   color: white !important; */
 }
 .btn-more-less {
-  font-family: "Righteous", cursive;
-  --bs-btn-color: #5a5757;
+  font-family: "Righteous", cursive !important;
+  --bs-btn-color: #inherit !important;
   /* --bs-btn-bg: #6c757d; */
   --bs-btn-border-color: #6c757d33;
   --bs-btn-hover-color: #fff;
