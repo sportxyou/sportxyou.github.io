@@ -161,7 +161,10 @@ svg {
   gap: 1px;
 }
 .thJersey{
-padding: 16px 2px !important;
+padding: 16px 0px !important;
+    font-size: 13px;
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
 }
 .tdJersey{
 padding: 16px 0px !important;
@@ -217,12 +220,13 @@ padding: 16px 0px !important;
 }
 .pertandingan-team {
   width: 195px;
-  padding: 0px 2px;
-  vertical-align: middle;
-  font-family: system-ui;
-  font-weight: 600;
-  font-size: 13px;
-  color: #081958;
+    padding: 0px 2px;
+    vertical-align: middle;
+    font-family: 'Righteous', cursive;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 15px;
+    color: #081958;
 }
 .pertandingan-tr {
   border-bottom: 1px solid #8080802e;
