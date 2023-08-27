@@ -162,6 +162,13 @@ svg {
   grid-template-columns: 1fr;
   gap: 1px;
 }
+tdImgTeamJersey{
+padding-bottom: 16px !important;
+}
+
+thImgTeamJersey{
+padding: 16px 2px !important;
+}
 .jersey-home {
   text-align: center;
   padding-right: 10px;
@@ -439,7 +446,7 @@ option.select-ops {
   font-family: inherit;
   display: flex;
   align-items: center;
-  color: #2c2c2c;
+/*   color: #2c2c2c; */
   font-weight: 600;
   margin-bottom: 8px;
 }
