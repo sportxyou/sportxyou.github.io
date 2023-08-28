@@ -247,7 +247,7 @@ padding: 16px 0px !important;
 /* tampilan  lain */
 .anak-header {
   display: flex;
-    background-color: #ffffffd4;
+/*     background-color: #ffffffd4; */
     /* padding: 8px 20px 20px 20px; */
     /* margin-bottom: 10px; */
     align-items: baseline;
@@ -498,12 +498,12 @@ option.select-ops {
 
 .info-lable {
   display: inline-block;
-  padding: 10px;
-  /* background-color: #eaeaea; */
-  /* border: 1px solid #ccc; */
-  border-radius: 4px;
-  cursor: pointer;
-  color: #106ee3;
+    padding-left: 15px;
+    /* background-color: #eaeaea; */
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    cursor: pointer;
+    color: #106ee3;
 }
 .info-lable:active {
   color: #ff0018;
