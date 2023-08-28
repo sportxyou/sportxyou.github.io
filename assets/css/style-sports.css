@@ -526,7 +526,7 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
 .popup-box__header {
   background: #1994b9d6;
   padding: 8px;
-  margin: -13px;
+  margin: -18px;
   border-radius: 5px 5px 0 0;
   color: white;
 }
