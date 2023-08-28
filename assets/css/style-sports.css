@@ -255,6 +255,10 @@ padding: 16px 0px !important;
     align-items: baseline;
     justify-content: center;
 }
+.nav-tab-sport{
+  display: flex;
+    justify-content: center;
+}
 .nav-link {
     font-family: "Righteous", cursive !important;
 }
