@@ -243,11 +243,14 @@ padding: 16px 0px !important;
 /* tampilan  lain */
 .anak-header {
   display: flex;
-  background-color: #ffffffd4;
-  padding: 8px 20px 20px 20px;
-  margin-bottom: 10px;
-  align-items: baseline;
-  justify-content: center;
+    background-color: #ffffffd4;
+    /* padding: 8px 20px 20px 20px; */
+    /* margin-bottom: 10px; */
+    align-items: baseline;
+    justify-content: center;
+}
+.nav-link {
+    font-family: "Righteous", cursive !important;
 }
 .wadah-col2 {
   display: flex;
