@@ -385,6 +385,7 @@ tbody {
   font-family: "Righteous", cursive;
   height: 30px;
   margin-bottom: 4px;
+  margin-top: 2px;
   overflow: hidden;
   position: relative;
   /* border: 1px solid #aaa; */
