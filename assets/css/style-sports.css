@@ -22,6 +22,8 @@ h5 {
     margin: 0 !important;
 }
 svg {
+    width: 20px !important;
+    height: 20px !important;
     fill: transparent !important;
 }
 .wadah-description {
@@ -530,24 +532,25 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
 }
 .popup-box__text {
   display: none;
-  position: absolute;
-  border: 1px solid white;
-  padding: 1rem;
-  font-size: 14px;
-  left: 0;
-  top: 122%;
-  transform: translate(0, 5%);
-  width: 386px;
-  border: 2px dotted #00c3fd59;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: inset -20px 18px 32px -35px #0c71ef9e;
+    z-index: 333;
+    position: absolute;
+    border: 1px solid white;
+    padding: 1rem;
+    font-size: 14px;
+    left: 0;
+    top: 122%;
+    transform: translate(0, 5%);
+    width: 386px;
+    border: 2px dotted #00c3fd59;
+    background-color: #efeded;
+    border-radius: 0.5rem;
+    box-shadow: inset -20px 18px 32px -35px #0c71ef9e;
 }
 div.popup-box__text::after {
   content: "";
   position: absolute;
-  bottom: 431px;
-  left: 26px;
+  bottom: 362px;
+    left: 29px;
   width: 15px;
   height: 15px;
   border: 2px dotted #00a1ff8a;
@@ -563,7 +566,7 @@ div.popup-box__text::after {
 div.popup-box__text::before {
   content: "";
   position: absolute;
-  bottom: 408px;
+  bottom: 342px;
   left: 43px;
   background: #b8860b00;
   width: 25px;
