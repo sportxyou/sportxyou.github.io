@@ -551,7 +551,7 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
 div.popup-box__text::after {
   content: "";
   position: absolute;
-  bottom: 354px;
+  bottom: 330px;
   left: 36px;
   width: 15px;
   height: 15px;
@@ -568,7 +568,7 @@ div.popup-box__text::after {
 div.popup-box__text::before {
   content: "";
   position: absolute;
-  bottom: 336px;
+  bottom: 313px;
     left: 53px;
   background: #b8860b00;
   width: 25px;
