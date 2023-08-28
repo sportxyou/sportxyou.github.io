@@ -532,6 +532,7 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
 }
 .popup-box__text {
   display: none;
+  color: white;
     z-index: 333;
     position: absolute;
     border: 1px solid white;
@@ -542,7 +543,7 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
     transform: translate(0, 5%);
     width: 386px;
     border: 2px dotted #00c3fd59;
-    background-color: #efeded;
+    background-color: #3d4a47;
     border-radius: 0.5rem;
     box-shadow: inset -20px 18px 32px -35px #0c71ef9e;
 }
