@@ -249,8 +249,8 @@ padding: 16px 0px !important;
 /* tampilan  lain */
 .anak-header {
   display: flex;
-/*     background-color: #ffffffd4; */
-    /* padding: 8px 20px 20px 20px; */
+    /*     background-color: #ffffffd4; */
+    padding: 8px 0 0;
     /* margin-bottom: 10px; */
     align-items: baseline;
     justify-content: center;
