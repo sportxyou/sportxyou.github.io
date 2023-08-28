@@ -50,7 +50,11 @@ svg {
   background-color: #5c636a1a;
   border-color: #0092ffc9;
 }
-
+.btn-light {
+    --bs-btn-color: inherit;
+    --bs-btn-bg: #f8f9fa00;
+    --bs-btn-border-color: #f8f9fa29;
+}
 /* flex data event today */
 .eventTodays {
   display: flex;
@@ -288,7 +292,9 @@ padding: 16px 0px !important;
   margin-left: 13px;
   color: #545454;
   text-align: center;
-  border-bottom: 4px double #0dc4dd5c;
+  border-top: 4px double #0dc4dd5c;
+    border-bottom: 4px double #0dc4dd5c;
+    background-color: #80808021;
 }
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 767px) {
@@ -444,16 +450,17 @@ option.select-ops {
   margin-bottom: 22px;
 }
 .btnCopyText {
-  margin-top: 8px;
-  border: none;
-  background-color: transparent;
-  font-size: 12px;
-  font-family: inherit;
-  display: flex;
-  align-items: center;
-/*   color: #2c2c2c; */
-  font-weight: 600;
-  margin-bottom: 8px;
+ font-family: "Righteous", cursive !important;
+    margin-top: 8px;
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    /* color: #2c2c2c; */
+    /* font-weight: 600; */
+    margin-bottom: 8px;
 }
 .gapi {
   gap: 0.5rem;
@@ -467,12 +474,12 @@ option.select-ops {
 }
 .header-desc {
   border: 1px solid #8080807a;
-/*   background-color: #ededed; */
+  background-color: #80808021;
 }
 .header-desc2 {
   padding: 10px 10px 34px;
   border: 1px solid #8080807a;
-/*   background-color: #ededed; */
+  background-color: #80808021;
   margin-bottom: 8px;
 }
 /* offcanavas */
