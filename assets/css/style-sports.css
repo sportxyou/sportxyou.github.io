@@ -543,8 +543,9 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
     border: 1px solid white;
     padding: 1rem;
     font-size: 14px;
-    left: 0;
-    top: 122%;
+/*     left: 0; */
+    right: -40px;
+    top: 145%;
     transform: translate(0, 5%);
     width: 386px;
     border: 2px dotted #00c3fd59;
@@ -555,8 +556,8 @@ input#checkbox-id[type="checkbox"]:checked ~ .popup-box__text {
 div.popup-box__text::after {
   content: "";
   position: absolute;
-  bottom: 330px;
-  left: 36px;
+  top: -40px;
+  right: 31px;
   width: 15px;
   height: 15px;
   border: 2px dotted #00a1ff8a;
@@ -572,8 +573,8 @@ div.popup-box__text::after {
 div.popup-box__text::before {
   content: "";
   position: absolute;
-  bottom: 313px;
-    left: 53px;
+  top: -28px;
+  right: 13px;
   background: #b8860b00;
   width: 25px;
   height: 25px;
