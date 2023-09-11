@@ -1,0 +1,222 @@
+/* INDEX CSS */
+.clickable-card {
+  cursor: pointer;
+}
+.card {
+  position: relative;
+}
+.card-body {
+  padding: 0;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card:hover .card-overlay {
+  opacity: 1;
+}
+.play-icon {
+  font-size: 40px;
+  color: white;
+}
+.card-title-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  background-image: linear-gradient(
+    to top,
+    #000000eb,
+    #000000d6,
+    #000000d6,
+    #000000cf,
+    #000000c7,
+    #000000b8,
+    #000000ab,
+    #0000008c,
+    #0000006b,
+    #0000003b,
+    #0000000f,
+    #00000000
+  );
+}
+.card-detail {
+  padding: 5px;
+}
+.card-detail-canava {
+  padding: 5px;
+}
+.kotak-pencarian {
+  width: 160px !important;
+}
+.offcanvas.offcanvas-bottom {
+  height: 88% !important;
+}
+.offcanvas-header {
+  padding: 10px 30px 0px 10px !important;
+}
+@media (min-width: 768px) {
+  .posterMotieTv {
+    height: 250px;
+  }
+  .card-detail-canava {
+    width: 10%;
+  }
+  .posterMotieTvCanava {
+    height: 186px;
+  }
+}
+
+/* SEASON CSS */
+.season-card {
+  margin-bottom: 10px;
+}
+.season-poster {
+  width: 100px;
+  height: 140px;
+}
+.row-season {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wadah-season {
+  padding: 10px;
+}
+.detail-season {
+  text-align: center;
+}
+.episode-backdrop {
+  width: 130px;
+  max-width: 130px !important;
+  height: 80px;
+  display: block;
+  border-radius: 4px;
+}
+.media {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+.media-left {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 15px;
+}
+.media-episode-heading {
+  font-size: 15px;
+  font-weight: 700;
+}
+.media-episode-body {
+  font-size: 14px;
+}
+.label-runtime {
+  background-color: #009aff;
+  border-radius: 4px;
+  padding: 0px 5px;
+  color: inherit;
+  font-weight: 600;
+}
+.label-date {
+  background-color: #009aff;
+  border-radius: 4px;
+  padding: 0px 5px;
+  color: inherit;
+  font-weight: 600;
+}
+.plot {
+  margin-bottom: 0;
+}
+
+/* EPISODE */
+.poster-image-season {
+  width: 100%;
+}
+.tags {
+  width: 140px;
+  display: flex;
+  color: #13a1e5;
+  align-items: center;
+}
+.card-poster {
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(232, 3, 3) 15%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 8%,
+    rgb(0 0 0 / 57%) 24%
+  );
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 59%,
+    rgb(0 0 0 / 63%) 83%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--bs-card-img-overlay-padding);
+  border-radius: var(--bs-card-inner-border-radius);
+}
+div.rating-critic {
+  height: 25px;
+  display: block;
+  padding: 0px 8px;
+  margin-left: 14px;
+  font-size: 1em;
+  font-weight: 500;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #000;
+  border-color: #ccc;
+  border-radius: 5px;
+  color: #fff;
+  align-content: center;
+  align-items: center;
+}
+.detailInPoster {
+  font-size: 11px;
+  margin-bottom: -4px;
+  text-shadow: 0 0 5px black;
+  font-weight: 500;
+}
+.title-head {
+  font-size: 20px;
+}
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+/* MOVIE */
+.tahun {
+  font-size: 13px;
+  font-weight: 600;
+}
