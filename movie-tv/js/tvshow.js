@@ -188,9 +188,9 @@ $http.get(tvSeriesUrl).then(
             // Fungsi untuk mengarahkan pengguna ke halaman yang sesuai
             $scope.goToMediaDetail = function (media) {
               if ($scope.searchMediaType === "movie") {
-                $window.location.href = "movie.html?id=" + media.id;
+                $window.location.href = "/p/movie.html?id=" + media.id;
               } else if ($scope.searchMediaType === "tv") {
-                $window.location.href = "tv.html?id=" + media.id;
+                $window.location.href = "/p/tv.html?id=" + media.id;
               }
             };
 
