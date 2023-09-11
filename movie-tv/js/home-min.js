@@ -27,9 +27,9 @@
                   .toLowerCase()
                   .replace(/\s+/g, "-")
                   .replace(/:/g, "");
-                $window.location.href = `/p/movie.html?id=${movieId}/${movieTitle}`;
+                $window.location.href = `/p/movies.html?id=${movieId}/${movieTitle}`;
               } else {
-                $window.location.href = `/p/movie.html?id=${movieId}`;
+                $window.location.href = `/p/movies.html?id=${movieId}`;
               }
             };
 
