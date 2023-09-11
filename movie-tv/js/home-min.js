@@ -14,7 +14,7 @@
             $http
               .get(nowPlayingUrl)
               .then(function (response) {
-                $scope.nowPlayingMovies = response.data.results.slice(0, 12);
+                $scope.nowPlayingMovies = response.data.results.slice(0, 16);
               })
               .catch(function (error) {
                 console.error("Error fetching now playing movies:", error);
@@ -85,7 +85,7 @@
             $http
               .get(tvOnAirUrl)
               .then(function (response) {
-                $scope.tvShowsOnAir = response.data.results.slice(0, 12);
+                $scope.tvShowsOnAir = response.data.results.slice(0, 16);
               })
               .catch(function (error) {
                 console.error("Error fetching TV shows on air:", error);
