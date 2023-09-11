@@ -76,7 +76,7 @@
                 .replace(/[^a-z0-9]+/g, "-");
               additionalInfo = encodeURIComponent(additionalInfo);
               if ($scope.searchMediaType === "movie") {
-                $window.location.href = `movie.html?id=${media.id}/${additionalInfo}`;
+                $window.location.href = `/p/movie.html?id=${media.id}/${additionalInfo}`;
               } else if ($scope.searchMediaType === "tv") {
                 $window.location.href = "/p/tv.html?id=" + media.id;
               }
