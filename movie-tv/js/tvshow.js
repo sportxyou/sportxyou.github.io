@@ -1,4 +1,4 @@
- angular
+angular
         .module("mtApp", [])
         .controller("mtController", function ($scope, $http, $window) {
           var apiKey = "a79576e54c5bbb893011b98ca48f2460";
@@ -6,7 +6,13 @@
           var tvIdParts = tvIdSeasonEpisode.split("-");
           var tvId = tvIdParts[0];
           var seasonNumber = parseInt(tvIdParts[1]);
-var episodeNumber = parseInt(tvIdParts[2]);
+          var episodeNumber = parseInt(tvIdParts[2]);
+
+           // Variabel untuk menyimpan daftar musim TV
+          $scope.seasons = []; 
+           // Variabel untuk menyimpan daftar episode
+          $scope.episodes = [];
+          
 
 if (!isNaN(seasonNumber) && !isNaN(episodeNumber)) {
             var episodeUrl =
@@ -185,12 +191,62 @@ $http.get(tvSeriesUrl).then(
               }
             };
 
+             // MENAMPILKAN SEASON LIST TV
+            var seasonsUrl =
+              "https://api.themoviedb.org/3/tv/" +
+              tvId +
+              "?append_to_response=seasons&language=en-US&api_key=" +
+              apiKey;
+            $http.get(seasonsUrl).then(
+              function (seasonsResponse) {
+                // Periksa apakah 'seasons' ada dalam respons
+                if (seasonsResponse.data && seasonsResponse.data.seasons) {
+                  // Data yang Anda terima adalah daftar musim TV
+                  $scope.seasons = seasonsResponse.data.seasons;
+                } else {
+                  // 'seasons' tidak ada dalam respons, berikan pesan kesalahan atau tangani secara tepat
+                  console.error('Data musim TV tidak tersedia dalam respons.');
+                }
+              },
+              function (error) {
+                console.error("Error fetching TV seasons:", error);
+              }
+            );
+             // MENAMPILKAN SEASON LIST TV END
+
+              // MENAMPILKAN EPISODE LIST TV
+            var episodesUrl =
+              "https://api.themoviedb.org/3/tv/" +
+              tvId +
+              "/season/" +
+              seasonNumber +
+              "?language=en-US&api_key=" +
+              apiKey;
+
+          
+            $http.get(episodesUrl).then(
+              function (episodesResponse) {
+               
+                if (episodesResponse.data && episodesResponse.data.episodes) {
+                 
+                  $scope.episodes = episodesResponse.data.episodes;
+                } else {
+                
+                  console.error('Data episode tidak tersedia dalam respons.');
+                }
+              },
+              function (error) {
+                console.error("Error fetching TV episodes:", error);
+              }
+            );
+          // MENAMPILKAN EPISODE LIST TV END
+
             // Fungsi untuk mengarahkan pengguna ke halaman yang sesuai
             $scope.goToMediaDetail = function (media) {
               if ($scope.searchMediaType === "movie") {
-                $window.location.href = "/p/movie.html?id=" + media.id;
+                $window.location.href = "movie.html?id=" + media.id;
               } else if ($scope.searchMediaType === "tv") {
-                $window.location.href = "/p/tv.html?id=" + media.id;
+                $window.location.href = "tv.html?id=" + media.id;
               }
             };
 
@@ -236,18 +292,56 @@ $http.get(tvSeriesUrl).then(
 
 // Format date
 $scope.formatDate = function (inputDate) {
-  var parts = inputDate.split("-");
-  var dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
-  var monthNames = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  var monthName = monthNames[dateObj.getMonth()];
-  var day = dateObj.getDate();
-  var year = dateObj.getFullYear();
-  var formattedDate = monthName + " " + day + ", " + year;
-  return formattedDate;
+  if (inputDate) {
+    var parts = inputDate.split("-");
+    var dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
+    var monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    var monthName = monthNames[dateObj.getMonth()];
+    var day = dateObj.getDate();
+    var year = dateObj.getFullYear();
+    var formattedDate = monthName + " " + day + ", " + year;
+    return formattedDate;
+  } else {
+    return "Date not available";
+  }
 };
 
 
-        });
+// Fungsi untuk memperbarui URL parameter SEASON yang dipilih
+$scope.updateSeasonParameter = function (selectedSeason) {
+  if (selectedSeason && selectedSeason.season_number) {
+    var tvIdSeasonEpisode = getParameterByName("id");
+    var tvIdParts = tvIdSeasonEpisode.split("-");
+    var tvId = tvIdParts[0];
+    var episodeNumber = parseInt(tvIdParts[2]);
+    var tvShowName = $scope.tvSeriesTitle.replace(/ /g, "-");
+    var updatedUrl = `/p/tvshow.html?id=${tvId}-${selectedSeason.season_number}-${episodeNumber}/${tvShowName}`;
+    $window.location.href = updatedUrl;
+  } else {
+    console.error("Season or season_number is not available.");
+  }
+};
+
+// Fungsi untuk memperbarui URL parameter EPISODE yang dipilih
+$scope.updateEpisodeParameter = function (selectedEpisode) {
+  var episodeNumber = selectedEpisode.episode_number;
+  var tvShowName = $scope.tvSeriesTitle.replace(/ /g, "-"); // 
+  var updatedUrl = `/p/tvshow.html?id=${tvId}-${seasonNumber}-${episodeNumber}/${tvShowName}`;
+  $window.location.href = updatedUrl;
+};
+
+// Fungsi untuk memperbarui URL parameter episode
+function updateUrlParameter(key, value) {
+  var url = $window.location.href;
+  var regex = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+  var separator = url.indexOf("?") !== -1 ? "&" : "?";
+  if (url.match(regex)) {
+    return url.replace(regex, "$1" + key + "=" + value + "$2");
+  } else {
+    return url + separator + key + "=" + value;
+  }
+}
+});
