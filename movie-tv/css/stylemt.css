@@ -86,9 +86,10 @@
 .season-card {
   margin-bottom: 10px;
 }
-.season-poster {
-  width: 100px;
-  height: 140px;
+.poster-season, .season-poster {
+    width: 80px;
+    height: 115px;
+    display: inline-block;
 }
 .row-season {
   display: flex;
