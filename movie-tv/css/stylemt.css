@@ -97,10 +97,11 @@
     justify-content: center;
 }
 .wadah-season {
-  padding: 5px;
+  padding: 4px;
 }
 .detail-season {
   text-align: center;
+  font-size: 12px;
 }
 .episode-backdrop {
   width: 130px;
