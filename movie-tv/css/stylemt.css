@@ -92,10 +92,11 @@
 }
 .row-season {
   display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .wadah-season {
-  padding: 10px;
+  padding: 5px;
 }
 .detail-season {
   text-align: center;
