@@ -213,6 +213,60 @@ div.rating-critic {
 .title-head {
   font-size: 20px;
 }
+
+.hd-media {
+    position: absolute;
+    padding: 1px 6px;
+    margin: 5px;
+    border-radius: 3px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: helvetica neue,Helvetica,arial,sans-serif;
+    background-color: transparent;
+    background-image: -moz-linear-gradient(#159fff,#1a6bb3);
+    background-image: -webkit-linear-gradient(#159fff,#1a6bb3);
+    background-image: linear-gradient(#159fff,#1a6bb3);
+    background-repeat: repeat-x;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.25);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 1;
+}
+
+.rating-media {
+    position: absolute;
+    right: 0;
+    padding: 1px 6px;
+    margin: 5px;
+    border-radius: 3px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: helvetica neue,Helvetica,arial,sans-serif;
+    background-color: transparent;
+    background-image: -moz-linear-gradient(#159fff,#1a6bb3);
+    background-image: -webkit-linear-gradient(#159fff,#1a6bb3);
+    background-image: linear-gradient(#159fff,#1a6bb3);
+    background-repeat: repeat-x;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.25);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 1;
+}
+
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
