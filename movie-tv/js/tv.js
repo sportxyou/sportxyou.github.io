@@ -23,7 +23,7 @@
                   // Jika tidak ada hasil, tampilkan pesan
                   if ($scope.searchResults.length === 0) {
                     $scope.searchResults = [
-                      { title: "Tidak ada hasil yang ditemukan" },
+                      { title: "n/a" },
                     ];
                   }
                 })
