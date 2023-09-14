@@ -213,7 +213,9 @@ div.rating-critic {
 .title-head {
   font-size: 20px;
 }
-
+.iconi-rating{
+margin-bottom: -1px;
+}
 .hd-media {
     position: absolute;
     padding: 1px 6px;
