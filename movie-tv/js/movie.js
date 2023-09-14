@@ -169,7 +169,7 @@
                 // Data kru tidak tersedia, beri tahu pengguna
                 $scope.crew = [];
                 $scope.getDirectorNames = function () {
-                  return "Data kru tidak tersedia";
+                  return "n/a";
                 };
               }
             })
