@@ -328,6 +328,9 @@ border-radius: 4px 0 0 4px;
 color: #0095ff !important;
 vertical-align: text-bottom;
 }
+.kotak-pencarian::placeholder {
+  color: #0d6efd;
+}
 .nav-link {
   font-size:13px;
 }
