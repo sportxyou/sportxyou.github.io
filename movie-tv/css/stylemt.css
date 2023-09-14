@@ -325,8 +325,8 @@ border: 1px solid #5a5a5a;
 border-radius: 4px 0 0 4px;
 }
 .coni-menu {
- color: #0095ff;
- vertical-align: middle;
+color: #0095ff !important;
+vertical-align: text-bottom;
 }
 .nav-link {
   font-size:13px;
