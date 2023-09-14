@@ -304,3 +304,16 @@ padding: 10px 0;
   font-size: 13px;
   font-weight: 600;
 }
+
+.bg-body-tertiary {
+   background-color: #111111;
+}
+/* NAV-BAR MENU */
+.navbar {
+--bs-navbar-color: whitesmoke;
+    --bs-navbar-hover-color: #0472e8;
+    --bs-navbar-disabled-color: whitesmoke;
+    --bs-navbar-active-color: whitesmoke;
+    --bs-navbar-brand-color: whitesmoke;
+    --bs-navbar-brand-hover-color: #0472e8;
+}
