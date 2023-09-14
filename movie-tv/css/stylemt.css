@@ -324,7 +324,10 @@ background-color: #fff0;
 border: 1px solid #5a5a5a;
 border-radius: 4px 0 0 4px;
 }
-
+.coni-menu {
+ color: #0095ff;
+ vertical-align: middle;
+}
 .form-select {
 --bs-form-select-bg-img: url(https://api.iconify.design/ep/arrow-down-bold.svg?color=%230d6efd&width=40&height=40);
     background-color: #fff0;
