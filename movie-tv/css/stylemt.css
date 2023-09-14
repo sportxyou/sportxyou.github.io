@@ -306,7 +306,7 @@ padding: 10px 0;
 }
 
 .bg-body-tertiary {
-   background-color: #111111;
+   background-color: #111111 !important;
 }
 /* NAV-BAR MENU */
 .navbar {
