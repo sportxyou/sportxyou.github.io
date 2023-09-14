@@ -88,7 +88,7 @@ $http.get(tvSeriesUrl).then(
       $scope.cast = response.data.cast;
     } else {
       // 'cast' tidak ada dalam respons, berikan pesan kesalahan atau tangani secara tepat
-      console.error('Data cast tidak tersedia dalam respons.');
+      console.error('n/a.');
     }
   }
 )
@@ -117,10 +117,10 @@ $http.get(tvSeriesUrl).then(
                 if (tvCertifications.length > 0) {
                   $scope.tvSeriesCertification = tvCertifications[0].rating;
                 } else {
-                  $scope.tvSeriesCertification = "Tidak tersedia"; // Atur pesan default jika tidak ada certification TV yang tersedia
+                  $scope.tvSeriesCertification = "n/a"; // Atur pesan default jika tidak ada certification TV yang tersedia
                 }
               } else {
-                $scope.tvSeriesCertification = "Tidak tersedia"; // Atur pesan default jika tidak ada data certification TV
+                $scope.tvSeriesCertification = "n/a"; // Atur pesan default jika tidak ada data certification TV
               }
             },
             function (error) {
@@ -205,7 +205,7 @@ $http.get(tvSeriesUrl).then(
                   $scope.seasons = seasonsResponse.data.seasons;
                 } else {
                   // 'seasons' tidak ada dalam respons, berikan pesan kesalahan atau tangani secara tepat
-                  console.error('Data musim TV tidak tersedia dalam respons.');
+                  console.error('season n/a.');
                 }
               },
               function (error) {
@@ -232,7 +232,7 @@ $http.get(tvSeriesUrl).then(
                   $scope.episodes = episodesResponse.data.episodes;
                 } else {
                 
-                  console.error('Data episode tidak tersedia dalam respons.');
+                  console.error('eps n/a.');
                 }
               },
               function (error) {
