@@ -1,6 +1,8 @@
 /* INDEX CSS */
 .clickable-card {
   cursor: pointer;
+    --bs-card-inner-border-radius: none;
+    --bs-card-border-color: rgb(0 45 78);
 }
 .card {
   position: relative;
