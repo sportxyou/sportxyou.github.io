@@ -352,3 +352,25 @@ vertical-align: text-bottom;
 border-radius: 0 4px 4px 0;
 }
 
+/* OVERLAY ZOOM */
+/* Menggunakan transform untuk efek zoom */
+.card.clickable-card:hover .card-img-top {
+  transform: scale(1.1); /* Anda bisa menyesuaikan faktor zoom sesuai keinginan */
+  transition: transform 0.3s ease; /* Durasi dan jenis transisi */
+}
+
+/* Menggunakan opacity untuk overlay */
+.card.clickable-card .card-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card.clickable-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Style card container */
+.card-detail {
+  overflow: hidden; /* Menyembunyikan konten yang keluar dari card */
+  position: relative; /* Membuat elemen anak di dalam card bisa ditempatkan relatif terhadap card */
+}
