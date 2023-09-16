@@ -8,6 +8,9 @@
   src: url(https://cintakuaja68.github.io/assets/font/FS_Numbers.woff2)
     format("woff2");
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Righteous", cursive !important;
+}
 /* INDEX CSS */
 .clickable-card {
   cursor: pointer;
