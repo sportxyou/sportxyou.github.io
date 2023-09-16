@@ -266,13 +266,13 @@ $http.get(tvSeriesUrl).then(
 
           $scope.getBackdropUrl = function (backdropPath) {
             return backdropPath
-              ? "https://image.tmdb.org/t/p/w1280/" + backdropPath
+              ? "https://image.tmdb.org/t/p/w300/" + backdropPath
               : "";
           };
 
            $scope.getStillUrl = function (stillPath) {
             return stillPath
-              ? "https://image.tmdb.org/t/p/w1280/" + stillPath
+              ? "https://image.tmdb.org/t/p/w300/" + stillPath
               : "";
           };
 
