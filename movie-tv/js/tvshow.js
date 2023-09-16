@@ -41,6 +41,7 @@ if (!isNaN(seasonNumber) && !isNaN(episodeNumber)) {
                 $scope.tvSeriesTitle = tvSeriesResponse.data.name;
                 $scope.tvSeriesStatus = tvSeriesResponse.data.status;
                 $scope.tvSeriesBackdrop = tvSeriesResponse.data.backdrop_path;
+                $scope.tvSeriesPoster = tvSeriesResponse.data.poster_path;
                 $scope.tvSeriesType = tvSeriesResponse.data.type;
                 $scope.tvSeriesVoteAverage = tvSeriesResponse.data.vote_average.toFixed(1);
                 $scope.tvSeriesFirstAirDate = tvSeriesResponse.data.first_air_date;
