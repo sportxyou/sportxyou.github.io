@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@500&display=swap");
+
+@font-face {
+  font-display: fallback;
+  font-family: FS_Numbers;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cintakuaja68.github.io/assets/font/FS_Numbers.woff2)
+    format("woff2");
+}
 /* INDEX CSS */
 .clickable-card {
   cursor: pointer;
