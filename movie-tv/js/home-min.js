@@ -4,6 +4,13 @@
           "mtController",
           function ($scope, $http, $window, $location) {
             var apiKey = "a79576e54c5bbb893011b98ca48f2460";
+            $http
+              .get(
+                "https://api.themoviedb.org/3/trending/all/week?language=en-US&api_key=a79576e54c5bbb893011b98ca48f2460"
+              )
+              .then(function (response) {
+                $scope.trendingData = response.data.results;
+              });
             var nowPlayingUrl =
               "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_key=" +
               apiKey;
