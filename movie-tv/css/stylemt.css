@@ -56,7 +56,7 @@
   background: #1468b1;
 }
 body {
-  padding-top: 71px;
+/*   padding-top: 71px; */
   font-family: "Open Sans", sans-serif;
   background: #000;
   background-attachment: fixed;
@@ -484,7 +484,7 @@ a.nodecor:focus {
 .form-control {
   box-shadow: none;
   -webkit-box-shadow: none;
-  background: #000;
+  background-color: #000 !important;
   color: #ccc;
   border: 0;
 }
