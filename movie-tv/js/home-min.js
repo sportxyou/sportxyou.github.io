@@ -1,12 +1,12 @@
- angular
+angular
         .module("mtApp", [])
         .controller(
           "mtController",
           function ($scope, $http, $window, $location) {
-            var apiKey = "a79576e54c5bbb893011b98ca48f2460";
             $http
               .get(
-                "https://api.themoviedb.org/3/trending/all/week?language=en-US&api_key=a79576e54c5bbb893011b98ca48f2460"
+                "https://api.themoviedb.org/3/trending/all/week?language=en-US&api_key=" +
+                  apiKey
               )
               .then(function (response) {
                 $scope.trendingData = response.data.results;
@@ -104,8 +104,8 @@
 
             $scope.getPosterUrl = function (posterPath) {
               return posterPath
-                ? "https://image.tmdb.org/t/p/w200/" + posterPath
-                : "https://www.jakartaplayers.org/uploads/1/2/5/5/12551960/2297419_orig.jpg";
+                ? "https://image.tmdb.org/t/p/w300/" + posterPath
+                : "https://sportxyou.github.io/movie-tv/img/noposter.jpg";
             };
 
             // Fungsi untuk mengambil parameter dari URL
