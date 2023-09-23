@@ -1,4 +1,4 @@
-angular
+ angular
         .module("mtApp", [])
         .filter("duration", function () {
     return function (input) {
