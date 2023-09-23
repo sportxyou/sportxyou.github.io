@@ -2475,6 +2475,10 @@ div.rating-critic {
   top: 5px;
   right: 5px;
 }
+.label-rating-cora {
+  top: 0;
+  right: -110px;
+}
 /* Caption di bawah judul */
 .caption {
   position: absolute;
