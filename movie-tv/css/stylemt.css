@@ -2456,7 +2456,7 @@ div.rating-critic {
   position: absolute;
   padding: 2px 4px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #dcff00;
   font-size: 12px;
   z-index: 1;
 }
@@ -2477,7 +2477,13 @@ div.rating-critic {
 }
 .label-rating-cora {
   top: 0;
-  right: -110px;
+    left: 0;
+    position: relative;
+    padding: 2px 4px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: #f2ff00;
+    font-size: 12px;
+    z-index: 1;
 }
 /* Caption di bawah judul */
 .caption {
