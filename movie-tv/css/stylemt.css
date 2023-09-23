@@ -2653,3 +2653,6 @@ li.hq:hover {
   opacity: 1;
 }
 
+.icon-options-vertical:before {
+ display:none !important;
+}
