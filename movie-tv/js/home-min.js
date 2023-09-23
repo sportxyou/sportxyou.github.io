@@ -1,8 +1,9 @@
-angular
+ angular
         .module("mtApp", [])
         .controller(
           "mtController",
           function ($scope, $http, $window, $location) {
+            
             $http
               .get(
                 "https://api.themoviedb.org/3/trending/all/week?language=en-US&api_key=" +
