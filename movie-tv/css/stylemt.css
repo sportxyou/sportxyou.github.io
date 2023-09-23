@@ -720,6 +720,11 @@ form .input-group {
 .rating-on {
   color: #f90;
 }
+.rating-star {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
 /* CSS untuk mengatur lebar dan pemisahan antar kolom */
 .crew-list {
   width: 33.33%; /* Mengatur lebar setiap kolom menjadi 33.33% */
