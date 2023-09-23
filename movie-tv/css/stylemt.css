@@ -666,11 +666,11 @@ form .input-group {
 .table-bordered > thead > tr > td,
 .table-bordered > thead > tr > th {
   border-color: #222;
+  border-left: 1px solid #80808000 !important;
+  border-right: 1px solid #80808000 !important;
 }
 .table-hover > tbody > tr:hover {
   background-color: #222;
-  border-left: 1px solid #80808000 !important;
-  border-right: 1px solid #80808000 !important;
 }
 .table th {
   white-space: nowrap;
