@@ -56,7 +56,7 @@
   background: #1468b1;
 }
 body {
-/*   padding-top: 71px; */
+  /*   padding-top: 71px; */
   font-family: "Open Sans", sans-serif;
   background: #000;
   background-attachment: fixed;
@@ -665,12 +665,12 @@ form .input-group {
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > thead > tr > th {
-  border-color: #222;
+  border-color: #22222269 !important;
   border-left: 1px solid #80808000 !important;
   border-right: 1px solid #80808000 !important;
 }
 .table-hover > tbody > tr:hover {
-  background-color: #222;
+  background-color: #22222275 !important;
 }
 .table th {
   white-space: nowrap;
@@ -2214,6 +2214,26 @@ footer#site-footer {
     margin-left: 33px;
     text-align: left;
   }
+  .media {
+    overflow: hidden;
+    zoom: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .media-left {
+    display: contents;
+  }
+  .row-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .img-poster {
+    width: 160px;
+    height: 230px !important;
+  }
 }
 @media (max-width: 992px) {
   [class*="col-0"] {
@@ -2484,13 +2504,13 @@ div.rating-critic {
 }
 .label-rating-cora {
   top: 0;
-    left: 0;
-    position: relative;
-    padding: 2px 4px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    color: #f2ff00;
-    font-size: 12px;
-    z-index: 1;
+  left: 0;
+  position: relative;
+  padding: 2px 4px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #f2ff00;
+  font-size: 12px;
+  z-index: 1;
 }
 /* Caption di bawah judul */
 .caption {
@@ -2661,5 +2681,10 @@ li.hq:hover {
 }
 
 .icon-options-vertical:before {
- display:none !important;
+  display: none !important;
+}
+
+.thumbnail {
+  background-color: #fff0 !important;
+  border: 1px solid #ddd0 !important;
 }
