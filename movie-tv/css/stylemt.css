@@ -262,8 +262,8 @@ a.nodecor:focus {
   color: #fff;
 }
 .navbar-default {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: #0e0e0e;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border-color: #0e0e0e !important;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
