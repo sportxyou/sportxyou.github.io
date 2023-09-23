@@ -1,15 +1,124 @@
- angular
+angular
         .module("mtApp", [])
+        .filter("duration", function () {
+    return function (input) {
+      // Konversi waktu dari menit ke format "jam:menit:detik"
+      var hours = Math.floor(input / 60);
+      var minutes = input % 60;
+      var seconds = Math.floor(input / 60);
+
+      // Tambahkan nol di depan jika diperlukan
+      var formattedHours = (hours < 10) ? "0" + hours : hours;
+      var formattedMinutes = (minutes < 10) ? "0" + minutes : minutes;
+      var formattedSeconds = (seconds < 10) ? "0" + seconds : seconds;
+
+      return formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
+    };
+  })
         .controller("mtController", function ($scope, $http, $window) {
           $scope.getBackdropUrl = function (backdropPath) {
             return backdropPath
               ? "https://image.tmdb.org/t/p/w780/" + backdropPath
               : "";
           };
-          var apiKey = "a79576e54c5bbb893011b98ca48f2460";
           var params = getUrlParameters();
           var queryParams = new URLSearchParams(window.location.search);
           var movieParam = queryParams.get("id");
+        // now play movie
+           $http
+              .get(
+                "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_key=" + apiKey
+              )
+              .then(function (response) {
+                $scope.trendingMovie = response.data.results;
+              });
+
+        // upcoming movie
+           $http
+              .get(
+                "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=" + apiKey
+              )
+              .then(function (response) {
+                $scope.upcomingMovie = response.data.results;
+              });
+
+       //  similar movie
+         var idAndTitle = movieParam.split("/");
+         var movieId = idAndTitle[0];
+         if (movieId) {
+
+         $http
+         .get(
+          "https://api.themoviedb.org/3/movie/" + movieId + "/recommendations?language=en-US&page=1&api_key=" + apiKey
+         )
+        .then(function (response) {
+        $scope.recoMovie = response.data.results;
+        })
+        .catch(function (error) {
+       console.error("Error fetching similar movies:", error);
+       });
+       }
+    
+      //  cast detail
+$http
+  .get(
+    "https://api.themoviedb.org/3/movie/" +
+      movieId +
+      "/credits?language=en-US&api_key=" +
+      apiKey
+  )
+  .then(function (response) {
+    var credits = response.data;
+    $scope.cast = response.data.cast;
+
+    // Pastikan data kru tersedia dalam respons API
+    if (credits && credits.crew) {
+      $scope.crew = credits.crew;
+
+      // Fungsi untuk mendapatkan nama sutradara dari data kru
+      $scope.getDirectorNames = function (crew) {
+        var directors = crew.filter(function (member) {
+          return member.job === "Director";
+        });
+        return directors
+          .map(function (director) {
+            return director.name;
+          })
+          .join(", ");
+      };
+    } else {
+      // Data kru tidak tersedia, beri tahu pengguna
+      $scope.crew = [];
+      $scope.getDirectorNames = function () {
+        return "n/a";
+      };
+    }
+  })
+  .catch(function (error) {
+    console.error("Error fetching movie cast:", error);
+  });
+
+// Mengambil data gambar film dari API
+$http
+// .get("https://api.themoviedb.org/3/movie/" + movieId + "/images?api_key=" + apiKey + "&include_image_language=en&language=english")
+.get("https://api.themoviedb.org/3/movie/" + movieId + "/images?api_key=" + apiKey)
+  .then(function (response) {
+    $scope.movieImages = response.data.backdrops; 
+    $scope.moviePoster = response.data.posters; 
+  })
+  .catch(function (error) {
+    console.error("Error fetching movie images:", error);
+    console.log($scope.getPosterUrl(image.file_path));
+  });
+
+// IMAGE Random for Video Play
+$scope.getRandomImagePath = function() {
+  var imageCount = $scope.movieImages.length;
+  var randomIndex = Math.floor(Math.random() * imageCount);
+  var randomImagePath = $scope.movieImages[randomIndex].file_path;
+  return randomImagePath;
+};
+
 
           // Memisahkan ID film dan judul film
           var idAndTitle = movieParam.split("/");
@@ -209,15 +318,16 @@
           }
           $scope.getBackdropUrl = function (backdropPath) {
             return backdropPath
-              ? "https://image.tmdb.org/t/p/w1280/" + backdropPath
-              : "";
+              ? "https://image.tmdb.org/t/p/w300/" + backdropPath
+              : "https://sportxyou.github.io/movie-tv/img/nobackdrop.jpg";
           };
 
           $scope.getPosterUrl = function (posterPath) {
             return posterPath
               ? "https://image.tmdb.org/t/p/w300/" + posterPath
-              : "";
+              : "https://sportxyou.github.io/movie-tv/img/noposter.jpg";
           };
+    
 
           // Format date
           $scope.formatDate = function (inputDate) {
@@ -281,4 +391,13 @@
           } else {
             console.error("Movie ID not found in URL");
           }
-        });
+          
+$scope.goToMovieDetail = function (id, title) {
+  // Mengganti spasi dengan tanda "-" dan mengubah huruf menjadi huruf kecil (lowercase)
+  var formattedTitle = title.replace(/:/g, '').replace(/ /g, '-').toLowerCase();
+  
+  // Lakukan aksi yang sesuai saat elemen diklik.
+  // Redirect ke halaman detail film dengan parameter ID dan judul yang telah diformat
+  $window.location.href = "/p/movie.html?id=" + id + "/" + formattedTitle;
+};
+  });
