@@ -2243,6 +2243,12 @@ footer#site-footer {
     overflow: overlay;
     height: 150px;
   }
+  .media-heading {
+    font-size: 11px;
+  }
+  i.jacob {
+    font-size: 11px;
+  }
 }
 @media (max-width: 992px) {
   [class*="col-0"] {
@@ -2360,6 +2366,11 @@ footer#site-footer {
 /* *****************************
  NEW CSS LINE 
  ******************************* */
+.post-recom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
 
 .poster {
   display: grid;
