@@ -680,6 +680,9 @@ form .input-group {
 .table tr:hover td.ext-title {
   color: #fff;
 }
+.table td:hover {
+  background-color: #22222247;
+}
 #ext-download li {
   list-style: none;
   position: relative;
@@ -2214,15 +2217,14 @@ footer#site-footer {
     margin-left: 33px;
     text-align: left;
   }
-  .media {
-    overflow: hidden;
-    zoom: 1;
+
+  .media-credits {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
-  .media-left {
+  .media-crew {
     display: contents;
   }
   .row-img {
@@ -2233,6 +2235,13 @@ footer#site-footer {
   .img-poster {
     width: 160px;
     height: 230px !important;
+  }
+  .flscr {
+    width: 45px;
+  }
+  .media-controls #setting_btn.dropup .dropdown-menu {
+    overflow: overlay;
+    height: 150px;
   }
 }
 @media (max-width: 992px) {
