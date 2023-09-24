@@ -1,5 +1,20 @@
 angular
         .module("mtApp", [])
+        .filter("duration", function () {
+    return function (input) {
+      // Konversi waktu dari menit ke format "jam:menit:detik"
+      var hours = Math.floor(input / 60);
+      var minutes = input % 60;
+      var seconds = Math.floor(input / 60);
+
+      // Tambahkan nol di depan jika diperlukan
+      var formattedHours = (hours < 10) ? "0" + hours : hours;
+      var formattedMinutes = (minutes < 10) ? "0" + minutes : minutes;
+      var formattedSeconds = (seconds < 10) ? "0" + seconds : seconds;
+
+      return formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
+    };
+  })
         .controller("mtController", function ($scope, $http, $window) {
           var apiKey = "a79576e54c5bbb893011b98ca48f2460";
           var tvIdSeasonEpisode = getParameterByName("id");
@@ -44,6 +59,7 @@ if (!isNaN(seasonNumber) && !isNaN(episodeNumber)) {
                 $scope.tvSeriesPoster = tvSeriesResponse.data.poster_path;
                 $scope.tvSeriesType = tvSeriesResponse.data.type;
                 $scope.tvSeriesVoteAverage = tvSeriesResponse.data.vote_average.toFixed(1);
+                $scope.tvSeriesVoteCount = tvSeriesResponse.data.vote_count;
                 $scope.tvSeriesFirstAirDate = tvSeriesResponse.data.first_air_date;
                 $scope.tvSeriesLastAirDate = tvSeriesResponse.data.last_air_date;
                 $scope.tvSeriesNumEpisode = tvSeriesResponse.data.number_of_episodes;
@@ -60,11 +76,12 @@ if (!isNaN(seasonNumber) && !isNaN(episodeNumber)) {
                     })
                     .join(", ");
                 $scope.tvSeriesTagline = tvSeriesResponse.data.tagline;
-                $scope.tvSeriesnetwork = tvSeriesResponse.data.networks
-                  .map(function (networks) {
-                    return networks.name;
-                  })
-                  .join(", ");
+                $scope.tvSeriesNetworks = tvSeriesResponse.data.networks.map(function (network) {
+                return {
+                 name: network.name,
+                logo_path: network.logo_path
+                };
+                });
                   $scope.tvSeriesCountry = tvSeriesResponse.data.production_countries.map(function (production_countries) {
                     return production_countries.name;
                   })
@@ -75,7 +92,41 @@ if (!isNaN(seasonNumber) && !isNaN(episodeNumber)) {
   })
   .join(", ");
 
-  // Menampilkan Pemain
+  // similar TVSHOW
+      $http.get(
+  "https://api.themoviedb.org/3/tv/" + tvId + "/recommendations?language=en-US&page=1&api_key=" + apiKey
+).then(
+  function (response) {
+    if (response.data && response.data.results) {
+      $scope.tvRecommendations = response.data.results;
+    } else {
+      console.error('No TV recommendations available.');
+    }
+  },
+  function (error) {
+    console.error("Error fetching TV recommendations:", error);
+  }
+);
+ 
+// AIRING Today
+           $http
+              .get(
+                "https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1&api_key=" + apiKey
+              )
+              .then(function (response) {
+                $scope.AiringToday = response.data.results;
+              });
+
+       // ON THE AIR TV SHOW
+           $http
+              .get(
+                "https://api.themoviedb.org/3/tv/on_the_air?language=en-US&page=1&api_key=" + apiKey
+              )
+              .then(function (response) {
+                $scope.onTheAir = response.data.results;
+              });
+
+  // CAST
   var tvSeriesUrl =
   "https://api.themoviedb.org/3/tv/" +
   tvId +
@@ -95,6 +146,60 @@ $http.get(tvSeriesUrl).then(
   }
 )
 
+// informasi CREWS
+var tvCrewUrl =
+  "https://api.themoviedb.org/3/tv/" +
+  tvId +
+  "/credits?language=en-US&api_key=" +
+  apiKey;
+
+$http.get(tvCrewUrl).then(
+  function (response) {
+    if (response.data && response.data.crew) {
+      $scope.crewMembers = response.data.crew;
+    } else {
+      console.error('Crew data not available.');
+    }
+  }
+);
+
+// Mengambil data gambar film dari API
+$http
+.get("https://api.themoviedb.org/3/tv/" + tvId + "/images?api_key=" + apiKey)
+  .then(function (response) {
+    $scope.tvImages = response.data.backdrops; 
+    $scope.tvPoster = response.data.posters; 
+  })
+  .catch(function (error) {
+    console.error("Error fetching tv images:", error);
+    console.log($scope.getPosterUrl(image.file_path));
+  });
+
+// Alternative Titles
+$scope.getAlternativeTitles = function () {
+  $http
+    .get("https://api.themoviedb.org/3/tv/" + tvId + "/alternative_titles?api_key=" + apiKey)
+    .then(function (response) {
+      $scope.alternativeTitles = response.data.results;
+    })
+    .catch(function (error) {
+      console.error("Error fetching alternative titles:", error);
+    });
+};
+$scope.getAlternativeTitles();
+
+// Alternative Titles
+$scope.getAlternativeTitles = function () {
+  $http
+    .get("https://api.themoviedb.org/3/tv/" + tvId + "/alternative_titles?api_key=" + apiKey)
+    .then(function (response) {
+      $scope.alternativeTitles = response.data.results;
+    })
+    .catch(function (error) {
+      console.error("Error fetching alternative titles:", error);
+    });
+};
+$scope.getAlternativeTitles();
  // Mendapatkan informasi certification TV dari API
           var tvCertificationUrl =
             "https://api.themoviedb.org/3/tv/" +
@@ -267,19 +372,25 @@ $http.get(tvSeriesUrl).then(
           $scope.getBackdropUrl = function (backdropPath) {
             return backdropPath
               ? "https://image.tmdb.org/t/p/w300/" + backdropPath
-              : "";
+              : "https://sportxyou.github.io/movie-tv/img/nobackdrop.jpg";
           };
 
            $scope.getStillUrl = function (stillPath) {
             return stillPath
               ? "https://image.tmdb.org/t/p/w300/" + stillPath
-              : "";
+              : "https://sportxyou.github.io/movie-tv/img/nobackdrop.jpg";
           };
 
           $scope.getPosterUrl = function (posterPath) {
             return posterPath
               ? "https://image.tmdb.org/t/p/w300/" + posterPath
-              : "";
+              : "https://sportxyou.github.io/movie-tv/img/noposter.jpg";
+          };
+
+          $scope.getProfilUrl = function (profilPath) {
+            return profilPath
+              ? "https://image.tmdb.org/t/p/w300/" + profilPath
+              : "https://sportxyou.github.io/movie-tv/img/noprofile.jpg";
           };
 
          function getParameterByName(name) {
@@ -346,4 +457,8 @@ function updateUrlParameter(key, value) {
     return url + separator + key + "=" + value;
   }
 }
+ $scope.goToTvDetail = function (tvId) {
+  $window.location.href = "/p/tv.html?id=" + tvId;
+   };
+            
 });
