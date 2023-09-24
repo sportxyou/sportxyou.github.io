@@ -347,7 +347,7 @@ a.nodecor:focus {
 }
 /* Modal */
 .modal {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .modal-dialog {
   overflow: hidden;
@@ -2619,6 +2619,33 @@ li.hq:hover {
 .detail-season {
   text-align: center;
   font-size: 12px;
+}
+.poster-season {
+  position: relative;
+}
+
+.title-season {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  color: #dddddd;
+  padding: 2px;
+  background-image: linear-gradient(
+    to top,
+    #000000eb,
+    #000000d6,
+    #000000d6,
+    #000000cf,
+    #000000c7,
+    #000000b8,
+    #000000ab,
+    #0000008c,
+    #0000006b,
+    #0000003b,
+    #0000000f,
+    #00000000
+  );
 }
 
 /* EPISODE LIST */
