@@ -724,9 +724,12 @@ form .input-group {
   color: #f90;
 }
 .rating-star {
-  position: absolute;
-  bottom: 20px;
-  left: 25px;
+  width: 86%;
+    /* height: 72px; */
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-image: linear-gradient( to top, #000000eb, #000000d6, #000000d6, #000000cf, #000000c7, #000000b8, #000000ab, #0000008c, #0000006b, #0000007a, #00000057, #0000002b );
 }
 /* CSS untuk mengatur lebar dan pemisahan antar kolom */
 .crew-list {
@@ -2252,6 +2255,14 @@ footer#site-footer {
 .post-recom {
     grid-template-columns: repeat(2, 1fr) !important;
 }
+.rating-star {
+  width: 91%;
+  /* height: 72px; */
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-image: linear-gradient( to top, #000000eb, #000000d6, #000000d6, #000000cf, #000000c7, #000000b8, #000000ab, #0000008c, #0000006b, #0000007a, #00000057, #0000002b );
+}
 }
 @media (max-width: 992px) {
   [class*="col-0"] {
@@ -2379,6 +2390,7 @@ footer#site-footer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 5px;
+  justify-content: center;
 }
 .poster-image-detail {
   width: 80%;
