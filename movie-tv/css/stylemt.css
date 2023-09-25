@@ -2610,15 +2610,16 @@ li.hq:hover {
 .row-season {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .wadah-season {
   padding: 2px;
   cursor: pointer;
 }
 .detail-season {
-  text-align: center;
-  font-size: 12px;
+  font-size: 11px;
+}
+.season-numb {
+font-size: 13px;
 }
 .poster-season {
   position: relative;
