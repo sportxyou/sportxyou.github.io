@@ -2138,7 +2138,7 @@ footer#site-footer {
 }
 @media (max-width: 767px) {
   body {
-    padding-top: 50px;
+    padding-top: 0px;
   }
   .nomobile {
     display: none !important;
