@@ -326,10 +326,10 @@ $scope.goToTvDetail = function (tvId) {
 
 // Scroll to id
 $scope.scrollToEpisodeList = function() {
-  var element = document.getElementById('episodeListX');
+  var element = document.getElementById('episodeList');
   if (element) {
     element.focus(); // Berikan fokus ke elemen
     element.scrollIntoView({ behavior: 'smooth' });
   }
-};      
+}; 
         });
