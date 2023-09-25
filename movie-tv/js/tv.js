@@ -323,5 +323,14 @@ if (window.location.href.includes("-live")) {
 $scope.goToTvDetail = function (tvId) {
   $window.location.href = "/p/tv.html?id=" + tvId;
    };
-  
+
+// Scroll to id
+$scope.scrollToEpisodeList = function() {
+  var element = document.getElementById('episodeList');
+  if (element) {
+    element.focus(); // Berikan fokus ke elemen
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+              
         });
