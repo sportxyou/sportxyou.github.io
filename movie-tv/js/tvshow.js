@@ -431,7 +431,7 @@ $scope.updateSeasonParameter = function (selectedSeason) {
     var tvId = tvIdParts[0];
     var episodeNumber = parseInt(tvIdParts[2]);
     var tvShowName = $scope.tvSeriesTitle.replace(/ /g, "-");
-    var updatedUrl = `/p/tvshow.html?id=${tvId}`;
+    var updatedUrl = `/p/tv.html?id=${tvId}`;
     $window.location.href = updatedUrl;
   } else {
     console.error("Season or season_number is not available.");
