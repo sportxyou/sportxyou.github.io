@@ -2250,7 +2250,7 @@ footer#site-footer {
     font-size: 11px;
   }
 .post-recom {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
 }
 }
 @media (max-width: 992px) {
