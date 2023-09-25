@@ -326,7 +326,7 @@ $scope.goToTvDetail = function (tvId) {
 
 // Scroll to id
 $scope.scrollToEpisodeList = function() {
-  var element = document.getElementById('episodeList');
+  var element = document.getElementById('HTML5');
   if (element) {
     element.focus(); // Berikan fokus ke elemen
     element.scrollIntoView({ behavior: 'smooth' });
