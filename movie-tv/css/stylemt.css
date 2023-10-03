@@ -262,7 +262,8 @@ a.nodecor:focus {
   color: #fff;
 }
 .dropdown-toggle:hover {
-  border-top: 2px solid #00c4ffe8;
+  margin-top: -4px;
+  border-bottom: 2px solid #00c4ffe8;
 }
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.8) !important;
@@ -308,6 +309,7 @@ a.nodecor:focus {
   color: #00d0ffe8;
   background-color: rgb(255 255 255 / 0%);
   border-bottom: 2px solid #00c4ffe8;
+  margin-top: -4px;
 }
 .container > .navbar-header {
   margin-left: 30px;
