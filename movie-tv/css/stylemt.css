@@ -976,7 +976,8 @@ a.side-list:hover {
 /* button */
 #button-offer {
   padding: 15px 0;
-  background: #000;
+    margin: 15px 0;
+    background: #000;
 }
 .btn-offer:focus,
 .btn-offer:active {
