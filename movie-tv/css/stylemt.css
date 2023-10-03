@@ -265,6 +265,7 @@ a.nodecor:focus {
   margin-top: -4px;
   border-bottom: 2px solid #00c4ffe8;
 }
+
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.8) !important;
   border-color: #0e0e0e !important;
@@ -2161,6 +2162,9 @@ footer#site-footer {
   .side-toggle {
     top: 18px;
   }
+.nav>li>a {
+ padding: 10px 11px;
+}
   .navbar-fixed-top {
     margin-bottom: 0;
   }
