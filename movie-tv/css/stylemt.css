@@ -261,7 +261,7 @@ a.nodecor:focus {
   outline: none;
   color: #fff;
 }
-.dropdown-toggle:hover {
+.dropdown-google:hover {
   margin-top: -4px;
   border-bottom: 2px solid #00c4ffe8;
 }
