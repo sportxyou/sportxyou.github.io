@@ -261,6 +261,9 @@ a.nodecor:focus {
   outline: none;
   color: #fff;
 }
+.dropdown-toggle:hover {
+  border-top: 2px solid #00c4ffe8;
+}
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.8) !important;
   border-color: #0e0e0e !important;
