@@ -786,7 +786,7 @@ h3.sub-title {
   height: 24px;
 }
 
-.widget-titles span {
+.sub-section span, .widget-titles span {
   float: left;
   margin-right: 20px;
   padding: 5px 10px;
@@ -798,7 +798,7 @@ h3.sub-title {
   border-left: 2px solid #1468b1;
 }
 
-.widget-titles:after {
+.sub-section span, .widget-titles:after {
   content: "";
   background: #1468b1;
   height: 1px;
