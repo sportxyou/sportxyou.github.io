@@ -785,8 +785,8 @@ h3.sub-title {
 .widget-title {
   height: 24px;
 }
-.sub-section span,
-.widget-title span {
+
+.widget-titles span {
   float: left;
   margin-right: 20px;
   padding: 5px 10px;
@@ -797,6 +797,27 @@ h3.sub-title {
   font-size: 18px;
   border-left: 2px solid #1468b1;
 }
+
+.widget-titles:after {
+  content: "";
+  background: #1468b1;
+  height: 1px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  top: 10px;
+}
+.sub-section span,
+.widget-title span {
+  float: left;
+  margin-right: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #1468b1;
+  font-size: 18px;
+}
+
 .sub-section:after,
 .widget-title:after {
   content: "";
