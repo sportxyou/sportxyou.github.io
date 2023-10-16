@@ -54,6 +54,7 @@ if (!isNaN(seasonNumber) && !isNaN(episodeNumber)) {
               function (tvSeriesResponse) {
                 // Tampilkan informasi seri TV di kartu
                 $scope.tvSeriesTitle = tvSeriesResponse.data.name;
+                $scope.tvSeriesOverview = tvSeriesResponse.data.overview;
                 $scope.tvSeriesStatus = tvSeriesResponse.data.status;
                 $scope.tvSeriesBackdrop = tvSeriesResponse.data.backdrop_path;
                 $scope.tvSeriesPoster = tvSeriesResponse.data.poster_path;
