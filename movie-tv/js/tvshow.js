@@ -189,18 +189,7 @@ $scope.getAlternativeTitles = function () {
 };
 $scope.getAlternativeTitles();
 
-// Alternative Titles
-$scope.getAlternativeTitles = function () {
-  $http
-    .get("https://api.themoviedb.org/3/tv/" + tvId + "/alternative_titles?api_key=" + apiKey)
-    .then(function (response) {
-      $scope.alternativeTitles = response.data.results;
-    })
-    .catch(function (error) {
-      console.error("Error fetching alternative titles:", error);
-    });
-};
-$scope.getAlternativeTitles();
+
  // Mendapatkan informasi certification TV dari API
           var tvCertificationUrl =
             "https://api.themoviedb.org/3/tv/" +
