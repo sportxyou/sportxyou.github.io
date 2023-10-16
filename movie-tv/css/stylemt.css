@@ -353,7 +353,7 @@ a.nodecor:focus {
 }
 /* Modal */
 .modal {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
 }
 .modal-dialog {
   overflow: hidden;
