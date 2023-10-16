@@ -792,8 +792,10 @@ h3.sub-title {
   padding: 5px 10px;
   text-transform: uppercase;
   color: #fff;
-  background: #b9090b;
-  font-size: 13px;
+  background: #00000000;
+ /* background: #1468b1; */
+  font-size: 18px;
+  border-left: 2px solid #1468b1;
 }
 .sub-section:after,
 .widget-title:after {
@@ -1052,10 +1054,7 @@ a.side-list:hover {
   color: #fff;
   background-color: #444;
 }
-.sub-section span,
-.widget-title span {
-  background: #1468b1;
-}
+
 /* player */
 #player,
 #home {
