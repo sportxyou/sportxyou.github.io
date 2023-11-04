@@ -52,7 +52,7 @@
 }
 
 .SuraNames {
-  fofont-family: SuraNames !important;
+    font-family: SuraNames !important;
     color: #0caf13;
     font-weight: 500 !important;
     font-size: 42px;
