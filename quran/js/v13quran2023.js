@@ -42,6 +42,7 @@ var app = angular.module('QuranApp', []);
           if ($scope.tafsirData && $scope.tafsirData.name && $scope.tafsirData.name.transliteration) {
             $scope.judulSurah = {
               namaTransliterasi: $scope.tafsirData.name.transliteration.id,
+              surahKe: $scope.formatSurahNumber($scope.tafsirData.number),
               namaArab: $scope.tafsirData.name.short,
               namaTerjemahan: $scope.tafsirData.name.translation.id,
               tipeRevelasi: $scope.tafsirData.revelation.id,
@@ -87,6 +88,17 @@ var app = angular.module('QuranApp', []);
     }
 };
 
+     // Fungsi untuk mengubah nomor surah sesuai kebutuhan
+    $scope.formatSurahNumber = function(number) {
+        if (number < 10) {
+            return '00' + number; // menambahkan "00" di depan angka 1-9
+        } else if (number >= 10 && number < 100) {
+            return '0' + number; // menambahkan "0" di depan angka 10-99
+        } else {
+            return number; // untuk ratusan, biarkan sesuai dengan angka asli
+        }
+    };
+        
     // conver to arabic
     $scope.convertToArabic = function(number) {
       // Fungsi untuk mengonversi angka ke angka Arab
