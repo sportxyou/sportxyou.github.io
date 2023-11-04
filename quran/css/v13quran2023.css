@@ -52,7 +52,8 @@
 }
 
 .quran-wrapper {
-    padding: 20px;
+    .quran-wrapper {
+    padding: 0px 13px 20px 13px;
     border-radius: 15px;
     background: rgb(79 149 44);
     background: linear-gradient(0deg, rgb(50 149 44 / 0%) 0%, rgb(19 107 22 / 5%) 50%, rgb(16 175 22 / 19%) 100%);
