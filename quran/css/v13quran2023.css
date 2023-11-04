@@ -68,6 +68,7 @@
     background: linear-gradient(0deg, rgb(50 149 44 / 0%) 0%, rgb(19 107 22 / 5%) 50%, rgb(16 175 22 / 19%) 100%);
 }
 
+.descriptQuran {display: none;}
 .terjemahSurah {margin: 1em 0;}
 
 .preBismillah {
