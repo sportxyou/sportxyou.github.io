@@ -52,22 +52,22 @@
 }
 
 .quran-wrapper {
-  padding: 20px;
-  border-radius: 15px;
-  background: rgb(44,148,149);
-    background: linear-gradient(0deg, rgb(44 128 149 / 0%) 0%, rgb(19 88 107 / 5%) 50%, rgb(32 131 197 / 8%) 100%);
+    padding: 20px;
+    border-radius: 15px;
+    background: rgb(79 149 44);
+    background: linear-gradient(0deg, rgb(50 149 44 / 0%) 0%, rgb(19 107 22 / 5%) 50%, rgb(16 175 22 / 19%) 100%);
 }
 
 .preBismillah {
     text-align: center !important;
 }
 .surah-title {
-  text-align: center;
-  border-bottom: 2px solid #216da585;
-  padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #1d9d51;
+    padding: 20px;
     border-radius: 15px;
     background: rgb(44,148,149);
-    background: linear-gradient(0deg, rgb(44 128 149 / 0%) 0%, rgb(19 88 107 / 5%) 50%, rgb(32 131 197 / 8%) 100%);
+    background: linear-gradient(0deg, rgb(50 149 44 / 0%) 0%, rgb(19 107 22 / 5%) 50%, rgb(16 175 22 / 19%) 100%);
 }
 .pembuka {
     text-align: center;
@@ -137,7 +137,8 @@
     font-size: 28px;
     text-align: right;
     padding: 20px; 
-  }
+   line-height: 58px;
+}
   .nomorKiri {
     font-size: 22px;
     display: flex;
