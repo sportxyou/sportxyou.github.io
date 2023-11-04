@@ -58,6 +58,9 @@
     font-size: 42px;
     margin: -13px !important;
 }
+.surahIndo {
+    margin: 0.2em 0 7px !important;
+}
 .quran-wrapper {
     padding: 0px 13px 20px 13px;
     border-radius: 15px;
@@ -139,12 +142,13 @@
     -webkit-margin-end: var(--spacing-xxsmall);
     margin-inline-end: var(--spacing-xxsmall);
   }
-  .arabic {  
+ .arabic {
     font-family: 'LPMQ IsepMisbah', sans-serif;
     font-size: 28px;
     text-align: right;
-    padding: 20px; 
-   line-height: 58px;
+    /* padding: 20px; */
+    margin: 0 !important;
+    line-height: 58px;
 }
   .nomorKiri {
     font-size: 22px;
