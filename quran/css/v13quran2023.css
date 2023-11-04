@@ -1,0 +1,173 @@
+
+ /* Mengimpor font ke dalam CSS menggunakan @font-face */
+@font-face {
+  font-family: 'LPMQ IsepMisbah';
+  src: url('https://sportxyou.github.io/font/LPMQ%20IsepMisbah.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'surahqurannu';
+  src: url('https://sportxyou.github.io/font/surahqurannu.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '_PDMS_Saleem_QuranFont';
+  src: url('https://sportxyou.github.io/font/_PDMS_Saleem_QuranFont.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuraNames';
+  src: url('https://sportxyou.github.io/font/sura_names.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OmarRegular';
+  src: url('https://sportxyou.github.io/font/Omar%20Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Quran karim 114 */
+@font-face {
+  font-family: 'QuranKarim114';
+  src: url('https://sportxyou.github.io/font/Quran%20karim%20114.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* QuranSurah1-mLKO5 */
+@font-face {
+  font-family: 'QuranSurah1';
+  src: url('https://sportxyou.github.io/font/QuranSurah1-mLKO5.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.quran-wrapper {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgb(44,148,149);
+    background: linear-gradient(0deg, rgb(44 128 149 / 0%) 0%, rgb(19 88 107 / 5%) 50%, rgb(32 131 197 / 8%) 100%);
+}
+
+.preBismillah {
+    text-align: center !important;
+}
+.surah-title {
+  text-align: center;
+  border-bottom: 2px solid #216da585;
+  padding: 20px;
+    border-radius: 15px;
+    background: rgb(44,148,149);
+    background: linear-gradient(0deg, rgb(44 128 149 / 0%) 0%, rgb(19 88 107 / 5%) 50%, rgb(32 131 197 / 8%) 100%);
+}
+.pembuka {
+    text-align: center;
+}
+.surah-arab {
+    list-style: none;
+}
+
+.latin {
+  color: #216da5;
+  margin-bottom: 2px !important;
+}
+.ang-arabic {
+        font-size: 28px;
+        border-radius: 100%;
+        padding: 0px 8px;
+        box-shadow: inset 0 0 9px 0px black;
+        vertical-align: middle;
+
+        /* position: relative;
+        left: 29%;
+        bottom: 9px;
+        width: 30px;
+        height: 30px;
+        background-color: lightblue;
+        border-radius: 50%;
+        display: flex;
+        align-items: baseline;
+        font-size: 24px;
+        justify-content: center; */
+}   
+
+.btn-bg {
+    /* color: #020202;
+    border-radius: 50%;
+    background: #128dd3;
+    width: 21px;
+    height: 21px;
+    padding-left: 2px;
+    line-height: 18px; */
+    color: #020202;
+    border-radius: 10px;
+    background: #51abeb;
+    width: 28px;
+    height: 18px;
+    padding-left: 5px;
+    line-height: 15px;
+}
+.bungkus{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center; 
+    /* line-height: 5px; */
+    -webkit-margin-end: var(--spacing-xxsmall);
+    margin-inline-end: var(--spacing-xxsmall);
+  }
+  .arabic {  
+    font-family: 'LPMQ IsepMisbah', sans-serif;
+    font-size: 34px;
+    text-align: right;
+    padding: 20px; 
+  }
+  .nomorKiri {
+    font-size: 22px;
+    display: flex;
+    position: relative;
+    /* top: -34px; */
+    right: 22px;
+    bottom: -2px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.frame-angka {
+  font-family: LPMQ IsepMisbah;
+    color: #414141;
+    font-size: 35px;
+    font-weight: 600;
+    /* padding: 0px 7px; */
+    margin-right: 13px;
+}
+  .img-frame {
+    width: 34px;
+  }
+button {
+    border: 1px;
+    background: transparent;
+}
+/* offcanvas */
+.offcanvas-bottom {
+  height: 55vh !important;
+}
+.offcanvas-body {
+  padding: 0rem 1rem !important;
+}
+.offcanvas-header {
+  padding: 0.5rem 1rem !important;
+}
+ng-cloak {
+  display: none;
+}
