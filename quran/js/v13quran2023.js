@@ -13,7 +13,7 @@ var app = angular.module('QuranApp', []);
       // Fungsi untuk memuat data surah saat pilihan berubah
       // $scope.$watch('selectedSurah', function() {
       //   if ($scope.selectedSurah) {
-          var surah_no = 21;
+          
           
           var apiUrl = `https://api.quran.gading.dev/surah/${surah_no}`;
       
