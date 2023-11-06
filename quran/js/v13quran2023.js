@@ -31,6 +31,7 @@ $scope.tafsirData = {};
             juz: ayat.meta && ayat.meta.juz ? ayat.meta.juz : 'Data Tidak Tersedia',
             teksArab: ayat.text && ayat.text.arab ? ayat.text.arab : 'Data Tidak Tersedia',
             transliterasiInggris: ayat.text && ayat.text.transliteration && ayat.text.transliteration.en ? ayat.text.transliteration.en : 'Data Tidak Tersedia',
+            terjemahanEn: ayat.translation && ayat.translation.id ? ayat.translation.en : 'Data Tidak Tersedia',
             terjemahan: ayat.translation && ayat.translation.id ? ayat.translation.id : 'Data Tidak Tersedia',
             audio: ayat.audio && ayat.audio.primary ? ayat.audio.primary : 'Data Tidak Tersedia',
             tafsirSingkat: ayat.tafsir && ayat.tafsir.id && ayat.tafsir.id.short ? ayat.tafsir.id.short : 'Data Tidak Tersedia',
