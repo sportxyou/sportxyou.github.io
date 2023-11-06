@@ -51,6 +51,14 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: "amiri-quran-colored-full";
+    src: url("https://sportxyou.github.io/font/amiri-quran-colored-full.eot");
+    src: url("https://sportxyou.github.io/font/amiri-quran-colored-full.woff") format("woff"),
+    url("https://sportxyou.github.io/font/amiri-quran-colored-full-org.otf") format("opentype"),
+    url("https://sportxyou.github.io/font/amiri-quran-colored-full.svg") format("svg");
+}
+
 .suraNames {
     font-family: SuraNames !important;
     color: #0caf13;
