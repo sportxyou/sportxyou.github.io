@@ -1,5 +1,4 @@
-
- /* Mengimpor font ke dalam CSS menggunakan @font-face */
+/* Mengimpor font ke dalam CSS menggunakan @font-face */
 @font-face {
   font-family: 'LPMQ IsepMisbah';
   src: url('https://sportxyou.github.io/font/LPMQ%20IsepMisbah.ttf') format('truetype');
@@ -199,4 +198,15 @@ button {
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+/* Style khusus jika diperlukan */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
 }
