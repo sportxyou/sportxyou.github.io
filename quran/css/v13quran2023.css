@@ -66,8 +66,10 @@
     margin: -13px !important;
 }
 .surahIndo {
-    margin: 0.2em 0 7px !important;
+   font-size: 15px;
+    margin: 0.2em 0 1px !important;
 }
+.juzAyatType {font-size: 12px;}
 .quran-wrapper {
     padding: 0px 13px 20px 13px;
     border-radius: 15px;
