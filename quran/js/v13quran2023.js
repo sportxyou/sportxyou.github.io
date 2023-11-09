@@ -26,12 +26,8 @@ app.controller('QuranController', function ($scope, $http) {
             });
     }
 
-     // Berdasarkan kebutuhan, Anda dapat memanggil fungsi untuk memuat data yang sesuai
-loadQuranData(); // Untuk memuat data Al-Quran
-// atau
-loadHadithData(); // Untuk memuat data hadits
-    
     loadHadithData($scope.currentPage); // Menggunakan $scope.currentPage
+    loadQuranData(); // Untuk memuat data Al-Quran
 
     $scope.loadPage = function (page) {
         if (page >= 1 && page <= $scope.hadithData.pagination.totalPages) {
