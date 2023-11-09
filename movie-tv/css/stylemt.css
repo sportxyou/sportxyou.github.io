@@ -2293,6 +2293,14 @@ footer#site-footer {
   left: 15px;
   background-image: linear-gradient( to top, #000000eb, #000000d6, #000000d6, #000000cf, #000000c7, #000000b8, #000000ab, #0000008c, #0000006b, #0000007a, #00000057, #0000002b );
 }
+.row-season {
+  justify-content: space-evenly;
+}
+
+.logoNetwork {
+    width: 30%;
+    top: 32px;
+}
 }
 @media (max-width: 992px) {
   [class*="col-0"] {
