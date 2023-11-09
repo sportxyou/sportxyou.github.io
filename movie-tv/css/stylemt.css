@@ -2301,6 +2301,9 @@ footer#site-footer {
     width: 30%;
     top: 32px;
 }
+.icon-flag {
+    margin: 2px 0;
+}
 }
 @media (max-width: 992px) {
   [class*="col-0"] {
