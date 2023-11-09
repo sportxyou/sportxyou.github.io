@@ -163,3 +163,5 @@ $scope.loading = false;
       console.error('Error fetching data:', error);
       $scope.loading = false; // Atur loading ke false jika ada kesalahan saat memuat data
     });
+
+   
