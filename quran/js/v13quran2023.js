@@ -25,10 +25,7 @@ app.controller('QuranController', function ($scope, $http) {
                 console.error('Gagal mengambil data:', error);
             });
     }
-
     loadHadithData($scope.currentPage); // Menggunakan $scope.currentPage
-    loadQuranData(); // Untuk memuat data Al-Quran
-
     $scope.loadPage = function (page) {
         if (page >= 1 && page <= $scope.hadithData.pagination.totalPages) {
             loadHadithData(page);
