@@ -213,3 +213,17 @@ button {
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 9999;
 }
+.btn-audio-tafsir {
+  color: #076f1099;
+    font-weight: bold;
+    margin-top: 8px !important;
+    border-top: 1px dotted #0daf4e7a;
+    border-bottom: 1px dotted #0daf4e7a;
+}
+.hashtag {
+  color: #076f1099;
+    font-weight: bold;
+    margin-top: 8px !important;
+    border-top: 1px dotted #0daf4e7a;
+    border-bottom: 1px dotted #0daf4e7a;
+}
