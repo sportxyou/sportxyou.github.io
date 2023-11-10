@@ -1330,17 +1330,21 @@ footer#site-footer {
   height: 19px;
   width: 19px;
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 11px;
   border-width: 2px;
   border-style: solid;
-  border-color: #1468b1 #1468b1 #fff;
+  border-color: #0088ff #0088ff #f9f100;
   border-radius: 100%;
   animation: rotation 3s infinite linear;
   display: block;
 }
 .counter-value {
-  color: #fff;
+  color: #e4ed75;
+}
+.user-online {
+font-size: 13px;
+color: #0088ff;
 }
 .flag {
   width: 16px;
