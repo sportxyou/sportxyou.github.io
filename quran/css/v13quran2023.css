@@ -84,13 +84,23 @@
     text-align: center !important;
 }
 .surah-title {
-    text-align: center;
-    box-shadow: 0 0 5px 0px #1d9d51;
-    /* border-bottom: 2px solid #1d9d51; */
-    padding: 20px;
+    /* text-align: center; */
+    box-shadow: inset 0px -2px 0px 0px #1d9d51;
+    border-bottom: 2px solid #1d9d51;
+    padding: 20px 0 0;
     border-radius: 5px;
     background: rgb(44,148,149);
-    background: linear-gradient(0deg, rgb(50 149 44 / 0%) 0%, rgb(19 107 22 / 5%) 50%, rgb(16 175 22 / 19%) 100%);
+    background: linear-gradient(0deg, rgb(50 149 44 / 44%) 0%, rgb(19 107 22 / 8%) 50%, rgb(16 175 22 / 0%) 100%);
+}
+
+.img-logo-surah {
+max-width: 115px;
+}
+
+.cover-surah {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .pembuka {
     text-align: center;
