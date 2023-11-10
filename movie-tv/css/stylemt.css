@@ -1346,6 +1346,9 @@ footer#site-footer {
 font-size: 13px;
 color: #0088ff;
 }
+.img-footer-hd {
+ width: 260px;
+}
 .flag {
   width: 16px;
   height: 11px;
