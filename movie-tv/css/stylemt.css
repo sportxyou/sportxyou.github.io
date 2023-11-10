@@ -2250,8 +2250,8 @@ color: #0088ff;
     position: relative;
   }
   #counter .globe:before {
-    top: 0;
-    left: -3px;
+    top: -2px;
+    left: -3.89999px;
   }
   .detailInPoster {
     margin-left: 33px;
