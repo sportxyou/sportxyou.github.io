@@ -237,3 +237,6 @@ button {
     border-top: 1px dotted #0daf4e7a;
     border-bottom: 1px dotted #0daf4e7a;
 }
+.offcanvas-title {
+    margin: 0 !important;
+}
