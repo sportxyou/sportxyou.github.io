@@ -230,6 +230,9 @@ button {
     border-top: 1px dotted #0daf4e7a;
     border-bottom: 1px dotted #0daf4e7a;
 }
+ .textTafsir, .textTafsirRingkas {
+ font-size:14px !important;
+}
 .hashtag {
   color: #076f1099;
     font-weight: bold;
