@@ -243,3 +243,9 @@ button {
 .offcanvas-title {
     margin: 0 !important;
 }
+
+@media screen and (max-width: 500px) {
+.zmImg
+padding-left: 30px;
+}
+}
