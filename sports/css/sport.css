@@ -263,3 +263,81 @@
     width: 100%;
 }
 }
+
+
+/* LIVESPORT */
+
+ table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-head {
+            margin-bottom: 20px;
+        }
+        th, td {
+            /* border: 1px solid #000; */
+            padding: 2px;
+            text-align: center;
+        }
+        .tdstatus {
+            width: 120px;
+            font-size: 13px;
+        }
+        .tdleague {
+            text-align: justify;
+            padding-left: 10px;
+            background-color: #0983a563;
+        }
+        .tdTeam{
+            width: 300px;
+            text-align: justify;
+            padding-left: 60px;
+
+        }
+        .tdScore {
+            width: 40px
+        }
+        .tbLeague {
+        border-bottom: 1px solid #00000036;
+        }
+        .tbLeague:hover{
+            background-color: #80808021;
+
+        }
+  .logoTeam {
+    width: 25px;
+  }
+  .tdLogoTeam {
+ width: 50px;
+  }
+  .tdTime {
+    text-align: center;
+  }
+  .timeMatch {
+    font-size: 10px;
+    position: relative;
+    bottom: 8px;
+  }
+     @media only screen and (max-width: 768px){
+    .tdstatus {
+    width: 16%;
+    font-size: 15px;
+}
+    .tdstatus {
+        /* text-align: justify; */
+    }     
+    .tdTeam{
+            padding-left: 10px;
+
+        }  
+    .deskt {
+        display: none;
+    } 
+    }    
+     @media only screen and (min-width: 768px){
+            
+     .mobileOnly {
+        display: none;
+       
+    }
+}
