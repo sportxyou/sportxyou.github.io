@@ -90,14 +90,42 @@
               }
             };
 
-            $http
-              .get(tvOnAirUrl)
-              .then(function (response) {
-                $scope.tvShowsOnAir = response.data.results.slice(0, 16);
-              })
-              .catch(function (error) {
-                console.error("Error fetching TV shows on air:", error);
-              });
+             $http.get(tvOnAirUrl)
+      .then(function (response) {
+        $scope.tvShowsOnAir = response.data.results.slice(0, 16);
+
+        // Ambil informasi episode terbaru untuk setiap acara TV
+        angular.forEach($scope.tvShowsOnAir, function (tvShow) {
+          getLatestEpisodeData(tvShow.id);
+        });
+      })
+      .catch(function (error) {
+        console.error("Error fetching TV shows on air:", error);
+      });
+
+    function getLatestEpisodeData(tvShowId) {
+      var latestEpisodeUrl = `https://api.themoviedb.org/3/tv/${tvShowId}/season/1?api_key=${apiKey}`;
+
+      $http.get(latestEpisodeUrl)
+        .then(function (episodeResponse) {
+          if (episodeResponse.data.episodes && episodeResponse.data.episodes.length > 0) {
+            const latestEpisode = episodeResponse.data.episodes.pop();
+            // Tambahkan informasi episode terbaru ke properti tvShow
+            var tvShow = $scope.tvShowsOnAir.find(function (tv) {
+              return tv.id === tvShowId;
+            });
+            tvShow.latestEpisodeData = {
+              episode_number: latestEpisode.episode_number,
+              air_date: latestEpisode.air_date
+            };
+          } else {
+            throw new Error('No episodes found for TV show with ID: ' + tvShowId);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error fetching latest episode data for TV show with ID " + tvShowId + ":", error);
+        });
+    }
 
             $scope.goToTvDetail = function (tvId) {
               $window.location.href = "/p/tv.html?id=" + tvId;
