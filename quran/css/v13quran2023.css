@@ -188,6 +188,12 @@ max-width: 115px;
     -webkit-margin-end: var(--spacing-xxsmall);
     margin-inline-end: var(--spacing-xxsmall);
 }
+
+.arabic_number {
+    font-family: amiri-quran-colored-full;
+    font-size: 24px;
+    color: #000000e6;
+}
  .arabic {
     font-family: 'LPMQ IsepMisbah', sans-serif;
     font-size: 28px;
