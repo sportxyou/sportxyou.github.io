@@ -57,7 +57,11 @@
     url("https://sportxyou.github.io/font/amiri-quran-colored-full-org.otf") format("opentype"),
     url("https://sportxyou.github.io/font/amiri-quran-colored-full.svg") format("svg");
 }
-
+.list-group {
+    cursor: pointer;
+    height: 300px;
+    overflow: overlay;
+}
 .suraNames {
     font-family: SuraNames !important;
     color: #0caf13;
