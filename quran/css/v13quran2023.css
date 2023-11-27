@@ -62,6 +62,9 @@
     height: 300px;
     overflow: overlay;
 }
+.list-group-surah {
+    font-family: LPMQ IsepMisbah;
+}
 .suraNames {
     font-family: SuraNames !important;
     color: #0caf13;
@@ -117,6 +120,11 @@ max-width: 115px;
   color: #216da5;
   margin-bottom: 2px !important;
 }
+.latin2 {
+    color: #128d0c;
+    text-shadow: 0px 1px 0px #119191;
+    margin-bottom: 10px !important;
+}
 .ang-arabic {
         font-size: 28px;
         border-radius: 100%;
@@ -169,6 +177,17 @@ max-width: 115px;
     -webkit-margin-end: var(--spacing-xxsmall);
     margin-inline-end: var(--spacing-xxsmall);
   }
+.bungkus2 {
+    direction: rtl;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    /* line-height: 5px; */
+    -webkit-margin-end: var(--spacing-xxsmall);
+    margin-inline-end: var(--spacing-xxsmall);
+}
  .arabic {
     font-family: 'LPMQ IsepMisbah', sans-serif;
     font-size: 28px;
@@ -195,6 +214,18 @@ max-width: 115px;
     font-weight: 600;
     /* padding: 0px 7px; */
     margin-right: 13px;
+}
+
+.frame-angka2 {
+    font-family: LPMQ IsepMisbah;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    /* padding: 0px 7px; */
+    margin-right: 13px;
+}
+.btn-audio-tafsir {
+    font-family: 'LPMQ IsepMisbah', sans-serif;
 }
   .img-frame {
     width: 34px;
