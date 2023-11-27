@@ -65,6 +65,12 @@
 .list-group-surah {
     font-family: LPMQ IsepMisbah;
 }
+.list-group-item {
+border: 1px solid rgb(0 0 0 / 0%)
+}
+.list-group-item:first-child:hover {
+    box-shadow: inset 0px 0px 20px 20px #3eaf6b;
+}
 .suraNames {
     font-family: SuraNames !important;
     color: #0caf13;
