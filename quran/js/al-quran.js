@@ -13,14 +13,16 @@ var app = angular.module('QuranApp', []);
     });
 
     app.controller('QuranController', function ($scope, $http, $window, $timeout, $location) {
-   var urlParams = new URLSearchParams($window.location.search);
-                if (urlParams.has('m')) {
-                    // Mengabaikan parameter "&m=1"
-                    urlParams.delete('m');
-                    var newUrl = $location.path() + '?' + urlParams.toString();
-                    $location.replace().path(newUrl);
-                }
-            };
+   $scope.init = function () {
+    // Mengatasi URL parameter "&m=1" dan "?m=1"
+    var urlParams = new URLSearchParams($window.location.search);
+    if (urlParams.has('m')) {
+        // Mengabaikan parameter "&m=1" atau "?m=1"
+        urlParams.delete('m');
+        var newUrl = $location.path() + ($location.search() ? '?' : '') + urlParams.toString();
+        $location.replace().path(newUrl);
+    }
+};
         
         $http.get('https://apidataislamic.github.io/data/quran.json').then(function (response) {
             $scope.ayahs = response.data.data; 
