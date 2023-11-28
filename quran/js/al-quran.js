@@ -22,6 +22,9 @@ var app = angular.module('QuranApp', []);
             // Mengganti URL tanpa parameter &m=1 atau ?m=1
             var cleanUrl = window.location.href.replace(/[\?&]m=1/g, '');
             $window.history.replaceState({}, document.title, cleanUrl);
+
+            // Jangan lakukan pengalihan jika parameter m=1 ditemukan
+            return;
         }
         
         $http.get('https://apidataislamic.github.io/data/quran.json').then(function (response) {
