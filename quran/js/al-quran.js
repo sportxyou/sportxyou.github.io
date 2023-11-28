@@ -14,15 +14,16 @@ var app = angular.module('QuranApp', []);
 
     app.controller('QuranController', function ($scope, $http, $window, $timeout) {
         var urlParams = new URLSearchParams(window.location.search);
-        var surahNameWithDash = urlParams.get('surah');
-        var surahName = surahNameWithDash ? surahNameWithDash.replace(/=/g, "-") : null;
-        
-    // Mengabaikan parameter &m=1 dari URL
-    if (urlParams.get('m') === '1') {
-        // Optional: Redirect ke URL tanpa parameter &m=1
-        var newUrl = window.location.href.replace('&m=1', '');
+    
+    // Mengabaikan parameter &m=1 dan ?m=1 dari URL
+    if (urlParams.get('m') === '1' || window.location.href.includes('?m=1')) {
+        // Optional: Redirect ke URL tanpa parameter &m=1 atau ?m=1
+        var newUrl = window.location.href.replace(/[?&]m=1/g, '');
         $window.history.replaceState({}, document.title, newUrl);
     }
+
+    var surahNameWithDash = urlParams.get('surah');
+    var surahName = surahNameWithDash ? surahNameWithDash.replace(/[=?&]m=1/g, '') : null;
         
         $http.get('https://apidataislamic.github.io/data/quran.json').then(function (response) {
             $scope.ayahs = response.data.data; 
