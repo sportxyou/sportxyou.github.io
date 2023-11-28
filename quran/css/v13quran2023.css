@@ -69,7 +69,10 @@
 border: 1px solid rgb(0 0 0 / 0%)
 }
 .list-group-item:hover {
-    box-shadow: inset 0px 0px 20px 20px #3eaf6b;
+/*     box-shadow: inset 0px 0px 20px 20px #3eaf6b; */
+  width: max-content;
+    box-shadow: inset 0px -14px 14px -16px #3eaf6b;
+    border-bottom: 1px dashed green;
 }
 .suraNames {
     font-family: SuraNames !important;
