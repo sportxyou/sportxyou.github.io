@@ -44,8 +44,6 @@ var app = angular.module('QuranApp', []);
 
             if (surahData) {
                 $scope.surah = surahData;
-            } else {
-                window.location.href = '/';
             }
         });
 
