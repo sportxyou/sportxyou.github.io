@@ -56,6 +56,16 @@ var app = angular.module('QuranApp', []);
             }
         };
 
+       // Fungsi untuk mengarahkan ke halaman surah.html dengan surah yang dipilih dari dropdown
+         $scope.redirectToSelectedSurah = function () {
+                if ($scope.selectedSurah) {
+                    var surahName = $scope.selectedSurah.name.transliteration.id;
+                    var url = '/p/al-quran.html?surah=' + surahName;
+
+                    $window.location.href = url;
+                }
+            };
+       
         $scope.openModal = function (ayah) {
             $scope.selectedAyah = ayah;
         };
