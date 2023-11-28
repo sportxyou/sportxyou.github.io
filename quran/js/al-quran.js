@@ -12,7 +12,7 @@ var app = angular.module('QuranApp', []);
         };
     });
 
-    app.controller('QuranController', function ($scope, $http, $window, $timeout) {
+    app.controller('QuranController', function ($scope, $http, $window, $timeout, $location) {
    var urlParams = new URLSearchParams(window.location.search);
         var surahNameWithDash = urlParams.get('surah');
         var surahName = surahNameWithDash ? surahNameWithDash.replace(/=/g, "-") : null;
