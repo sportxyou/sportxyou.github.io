@@ -123,7 +123,16 @@ border: 1px solid rgb(0 0 0 / 0%)
 .img-logo-surah {
 max-width: 115px;
 }
-
+.img-fluidz {
+    width: 175px;
+    height: 175px;
+}
+.img-col-surah {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
 .cover-surah {
     display: flex;
     flex-wrap: wrap;
