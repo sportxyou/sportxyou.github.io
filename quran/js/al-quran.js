@@ -58,7 +58,7 @@ var app = angular.module('QuranApp', []);
         $scope.redirectToSelectedSurah = function (selectedSurah) {
             if (selectedSurah) {
                 var surahName = selectedSurah.name.transliteration.id;
-                var url = '/p/al-quran.html?surah=' + surahName;
+                var url = '/p/al-quran.html?surah=' + surahName + ' &m=1';
                 $window.location.href = url;
             }
         };
