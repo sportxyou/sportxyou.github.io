@@ -13,16 +13,9 @@ var app = angular.module('QuranApp', []);
     });
 
    app.controller('QuranController', function ($scope, $http, $window, $timeout, $location) {
-   $scope.init = function () {
-    // Mengatasi URL parameter "&m=1" dan "?m=1"
-    var urlParams = new URLSearchParams($window.location.search);
-    if (urlParams.has('m')) {
-        // Mengabaikan parameter "&m=1" atau "?m=1"
-        urlParams.delete('m');
-        var newUrl = $location.path() + ($location.search() ? '?' : '') + urlParams.toString();
-        $location.replace().path(newUrl);
-    }
-};
+  var urlParams = new URLSearchParams(window.location.search);
+        var surahNameWithDash = urlParams.get('surah');
+        var surahName = surahNameWithDash ? surahNameWithDash.replace(/=/g, "-") : null;
         
         $http.get('https://apidataislamic.github.io/data/quran.json').then(function (response) {
         $scope.ayahs = response.data.data;
@@ -58,7 +51,7 @@ var app = angular.module('QuranApp', []);
         $scope.redirectToSelectedSurah = function (selectedSurah) {
             if (selectedSurah) {
                 var surahName = selectedSurah.name.transliteration.id;
-                var url = '/p/al-quran.html?surah=' + surahName + ' &m=1';
+                var url = '/p/al-quran.html?surah=' + surahName;
                 $window.location.href = url;
             }
         };
