@@ -125,4 +125,36 @@ var app = angular.module('QuranApp', []);
             $timeout(function () {
                 $scope.updateSurahNavigation();
             });
+
+        // ReadMore Tafsir
+  $scope.limitWords = function (text, limit) {
+        if (!text) return ''; // Kembalikan string kosong jika teks tidak ada atau tidak terdefinisi
+
+        // Mengambil array kata dari teks
+        var words = text.split(/\s+/);
+
+        // Mengambil sejumlah kata sesuai dengan batasan
+        var limitedWords = words.slice(0, limit);
+
+        // Menggabungkan kembali kata-kata tersebut dan menambahkan tanda elipsis jika terdapat kata lebih lanjut
+        return limitedWords.join(' ') + (words.length > limit ? '...' : '');
+    };
+
+    $scope.showFullTafsir = function () {
+        // Menampilkan teks tafsir secara penuh atau menutupnya saat "Read More/Less" diklik
+        $scope.fullTafsirShown = !$scope.fullTafsirShown;
+    };
+
+    $scope.getLimitedTafsir = function () {
+        // Mengambil teks tafsir sesuai dengan status "Read More/Less"
+        if ($scope.surah && $scope.surah.tafsir) {
+            return $scope.fullTafsirShown ? $scope.surah.tafsir.id : $scope.limitWords($scope.surah.tafsir.id, 40);
+        }
+        return ''; // Mengembalikan string kosong jika tidak ada tafsir yang terdefinisi
+    };
+
+    $scope.shouldShowReadMore = function () {
+        // Memeriksa apakah perlu menampilkan "Read More" berdasarkan panjang teks tafsir
+        return $scope.surah && $scope.surah.tafsir && $scope.surah.tafsir.id.length > 40;
+    };
         });
