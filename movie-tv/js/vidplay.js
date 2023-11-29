@@ -49,20 +49,6 @@ eval(
 //   $(document).ready(function () {});
 // })(jQuery);
 
-(function () {
-  // Mengatur waktu penundaan sebelum memulai fading
-  var fadeDelay = 3000; // 3 detik
-
-  // Memulai fading setelah waktu penundaan
-  setTimeout(function () {
-    $(".loader").fadeOut();
-    $(".page-loader").fadeOut("slow");
-  }, fadeDelay);
-
-  $(document).ready(function () {});
-})(jQuery);
-
-
 /* ---------------------------------------------- /*
     Slider home
 /* ---------------------------------------------- */
