@@ -40,13 +40,28 @@ eval(
 /* ---------------------------------------------- /*
         Preloader page
 /* ---------------------------------------------- */
+
+// (function () {
+//   $(window).on("load", function () {
+//     $(".loader").fadeOut();
+//     $(".page-loader").delay(350).fadeOut("slow");
+//   });
+//   $(document).ready(function () {});
+// })(jQuery);
+
 (function () {
-  $(window).on("load", function () {
+  // Mengatur waktu penundaan sebelum memulai fading
+  var fadeDelay = 3000; // 3 detik
+
+  // Memulai fading setelah waktu penundaan
+  setTimeout(function () {
     $(".loader").fadeOut();
-    $(".page-loader").delay(350).fadeOut("slow");
-  });
+    $(".page-loader").fadeOut("slow");
+  }, fadeDelay);
+
   $(document).ready(function () {});
 })(jQuery);
+
 
 /* ---------------------------------------------- /*
     Slider home
