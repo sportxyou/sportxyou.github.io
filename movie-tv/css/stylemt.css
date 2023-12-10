@@ -1316,8 +1316,8 @@ footer#site-footer {
 }
 #counter {
   position: fixed;
-  right: 15px;
-  bottom: 15px;
+  right: -10px;
+  bottom: 5px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 7px 15px;
 }
