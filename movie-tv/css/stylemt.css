@@ -1314,13 +1314,7 @@ footer#site-footer {
 .site-note {
   font-size: small;
 }
-#counter {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 7px 15px;
-}
+
 .globe {
   margin-right: 10px;
   color: #fff;
@@ -1341,6 +1335,7 @@ footer#site-footer {
 }
 .counter-value {
   color: #e4ed75;
+  font-size: 11px;
 }
 .user-online {
 font-size: 11px;
