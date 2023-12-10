@@ -1314,7 +1314,13 @@ footer#site-footer {
 .site-note {
   font-size: small;
 }
-
+#counter {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 7px 15px;
+}
 .globe {
   margin-right: 10px;
   color: #fff;
@@ -2234,12 +2240,13 @@ color: #0088ff;
   }
  
   #counter {
-   position: fixed;
-   right: 15px;
-   bottom: 15px;
-   background-color: rgba(0, 0, 0, 0.5);
-   padding: 7px 15px;
-   clear: both;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px 50px;
+    text-align: center;
+    clear: both;
   }
   #counter .globe {
     position: relative;
